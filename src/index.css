@@ -12,7 +12,7 @@
   }
 
   .nav-link {
-    @apply mr-8 md:text-lg text-primaryBrown dark:text-neutral-100
+    @apply mr-8 md:text-lg text-primaryBrown dark:text-neutral-100 
   }
 
   .background {
@@ -21,6 +21,10 @@
 
   .text-color {
     @apply text-primaryBrown dark:text-neutral-100
+  }
+
+  .active {
+    @apply font-bold mr-8 md:text-lg text-primaryBrown dark:text-neutral-100 underline underline-offset-8 
   }
 
 }

@@ -1,4 +1,4 @@
-import { useState, createContext, useContext } from "react";
+import { useState, createContext } from "react";
 
 import { Outlet } from "react-router-dom";
 import { Nav } from "./Nav";
@@ -19,7 +19,7 @@ export const Layout = () => {
         <DarkModeContext.Provider value={{ darkMode, toggleDarkMode }}>
             <Nav />
             <main>
-                <Outlet />
+                <Outlet context={{ darkMode }}/>
             </main>
             <Footer />
         </DarkModeContext.Provider>
