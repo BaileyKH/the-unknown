@@ -11,7 +11,7 @@ export const Home = () => {
 
     return(
         <div className={`${darkMode && "dark"}`}>
-            <div className="bg-bgLight dark:bg-bgDark w-full">
+            <div className="background w-full">
                 <div className="w-full">
                     <img src={darkMode ? darkHero : heroImg} className="w-full"/>
                 </div>

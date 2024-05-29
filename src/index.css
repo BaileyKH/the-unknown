@@ -10,4 +10,17 @@
   body {
     @apply font-inter scroll-smooth
   }
+
+  .nav-link {
+    @apply mr-8 md:text-lg text-primaryBrown dark:text-neutral-100
+  }
+
+  .background {
+    @apply bg-bgLight dark:bg-bgDark
+  }
+
+  .text-color {
+    @apply text-primaryBrown dark:text-neutral-100
+  }
+
 }

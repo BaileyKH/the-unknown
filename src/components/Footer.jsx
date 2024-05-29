@@ -8,7 +8,7 @@ export const Footer = () => {
 
     return(
         <div className={`${darkMode && "dark"}`}>
-            <div className="h-20 bg-bgLight dark:bg-bgDark"></div>
+            <div className="h-20 background"></div>
         </div>
     );
 }
