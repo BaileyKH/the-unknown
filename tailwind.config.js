@@ -6,9 +6,14 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        inter: [`"Inter", sans-serif;`],
+        jaini: [`"Jaini Purva", system-ui;`]
+      },
       colors: {
         bgLight: "#c8f781",
         bgDark: "#1c1c1c",
+        primaryBrown: "#66431f",
       },
       backgroundImage: {
         'hero-bg': "url('/src/assets/images/day-hero.svg')",

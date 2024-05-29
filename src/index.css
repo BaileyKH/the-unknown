@@ -5,3 +5,9 @@
 * {
   @apply transition-colors duration-200;
 }
+
+@layer base {
+  body {
+    @apply font-inter scroll-smooth
+  }
+}
