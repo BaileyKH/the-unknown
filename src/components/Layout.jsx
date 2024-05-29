@@ -2,12 +2,10 @@ import { useState, createContext, useContext } from "react";
 
 import { Outlet } from "react-router-dom";
 import { Nav } from "./Nav";
+import { Footer } from "./Footer";
 
-const DarkModeContext = createContext();
+export const DarkModeContext = createContext();
 
-export const useDarkMode = () => {
-    return useContext(DarkModeContext);
-};
 
 export const Layout = () => {
 
@@ -19,12 +17,11 @@ export const Layout = () => {
 
     return(
         <DarkModeContext.Provider value={{ darkMode, toggleDarkMode }}>
-            <div className={darkMode ? "dark" : ""}>
-                <Nav />
-                <main>
-                    <Outlet />
-                </main>
-            </div>
+            <Nav />
+            <main>
+                <Outlet />
+            </main>
+            <Footer />
         </DarkModeContext.Provider>
     );
 }
