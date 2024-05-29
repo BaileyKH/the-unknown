@@ -8,15 +8,11 @@
 
 @layer base {
   body {
-    @apply font-inter scroll-smooth
+    @apply font-inter scroll-smooth bg-bgLight dark:bg-bgDark
   }
 
   .nav-link {
     @apply mr-8 md:text-lg text-primaryBrown dark:text-neutral-100 
-  }
-
-  .background {
-    @apply bg-bgLight dark:bg-bgDark
   }
 
   .text-color {

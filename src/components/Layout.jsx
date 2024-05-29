@@ -1,4 +1,4 @@
-import { useState, createContext } from "react";
+import { useState, createContext, useEffect } from "react";
 
 import { Outlet } from "react-router-dom";
 import { Nav } from "./Nav";
@@ -9,7 +9,18 @@ export const DarkModeContext = createContext();
 
 export const Layout = () => {
 
-    const [darkMode, setDarkMode] = useState(false) 
+    const initialDarkMode = localStorage.getItem('darkMode') === 'true';
+    const [darkMode, setDarkMode] = useState(initialDarkMode) 
+
+    useEffect(() => {
+        localStorage.setItem('darkMode', darkMode)
+
+        if (darkMode) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    }, [darkMode])
     
     const toggleDarkMode = () => {
         setDarkMode(prevMode => !prevMode)
