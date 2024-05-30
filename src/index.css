@@ -20,7 +20,7 @@
   }
 
   .active {
-    @apply font-bold mr-8 md:text-lg text-primaryBrown dark:text-neutral-100 underline underline-offset-8 
+    @apply font-bold mr-8 md:text-lg text-[#ca8a04] dark:text-amber-700 underline underline-offset-8 
   }
 
 }

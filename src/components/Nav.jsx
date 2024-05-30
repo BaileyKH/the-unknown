@@ -13,7 +13,7 @@ export const Nav = () => {
 
     return(
         <div className={`${darkMode && "dark"}`}>
-            <div className="h-16 md:h-20 px-2 md:px-4 flex items-center justify-between drop-shadow-lg">
+            <div className="h-16 md:h-20 px-2 md:px-4 flex items-center justify-between">
                 <Link to="/" className="font-jaini text-3xl md:text-4xl text-color">The Unknown</Link>
                 <nav className="px-2">
                     <div className="hidden md:flex items-center justify-center">

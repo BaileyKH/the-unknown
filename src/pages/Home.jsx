@@ -2,16 +2,12 @@ import { Link, useOutletContext } from "react-router-dom";
 
 import { IconExclamationMark } from '@tabler/icons-react';
 
-import { test } from "../api";
-
 import heroImg from '/src/assets/images/day-hero.svg'
 import darkHero from '/src/assets/images/hero-night.svg'
 
 export const Home = () => {
 
     const { darkMode } = useOutletContext();
-
-    console.log(test('AZ'))
 
     return(
         <div className={`${darkMode && "dark"}`}>
