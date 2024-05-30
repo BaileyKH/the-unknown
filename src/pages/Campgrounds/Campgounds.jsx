@@ -1,17 +1,16 @@
-import React from "react";
-import { useOutletContext } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useOutletContext } from "react-router-dom";
 
 import lightPark from '/src/assets/images/park-light.svg'
 import darkPark from '/src/assets/images/park-dark.svg'
 import tent from '/src/assets/images/tent-icon.svg'
-
-import { IconCampfire } from '@tabler/icons-react';
+import { CampgroundList } from "../../components/CampgroundList";
 
 export const Campgrounds = () => {
 
     const { darkMode } = useOutletContext();
 
-    return(
+    return (
         <div className="mx-8">
             <div className="flex items-center justify-center">
                 <img src={darkMode ? darkPark : lightPark} className="rounded-b-xl"/>
@@ -25,8 +24,11 @@ export const Campgrounds = () => {
                     </p>
                 </div>
             </div>
-            <div>
-                
+            <div className="flex flex-col items-center justify-center my-6 md:my-8">
+                <h2 className="text-color font-bold text-2xl md:text-3xl bg-lime-700/50 dark:bg-purple-900/50 rounded-md px-2 py-1 md:px-4 md:py-2">
+                    Search for Campgrounds
+                </h2>
+                <CampgroundList />
             </div>
         </div>
     );
