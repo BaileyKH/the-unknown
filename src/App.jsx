@@ -4,6 +4,7 @@ import { Home } from "./pages/Home"
 import { Layout } from './components/Layout';
 import { Campgrounds } from './pages/Campgrounds/Campgounds';
 import { NotFound } from './pages/NotFound';
+import { CampgroundDetail } from './pages/Campgrounds/CampgroundDetail';
 
 
 
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="/grounds" element={<Campgrounds />} />
+            <Route path="grounds/:id" element={<CampgroundDetail />} />
 
             <Route path="*" element={<NotFound />} />
           </Route>

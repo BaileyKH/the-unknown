@@ -4,7 +4,7 @@ const apiKey = import.meta.env.VITE_NPS_API_KEY
 // # base url: developer.nps.gov/api/v1
 
 export async function getCampgrounds(state) {
-    const res = await fetch(`https://developer.nps.gov/api/v1/campgrounds?stateCode=${state}&limit=10&api_key=${apiKey}`, {
+    const res = await fetch(`https://developer.nps.gov/api/v1/campgrounds?stateCode=${state}&limit=20&api_key=${apiKey}`, {
         headers: {
             'X-Api-Key': apiKey
         }
@@ -20,4 +20,19 @@ export async function getCampgrounds(state) {
     }
 
     return data.data
+}
+
+export async function getCampground(id) {
+    const res = await fetch(`https://developer.nps.gov/api/v1/campgrounds?id=${id}&api_key=${apiKey}`, {
+        headers: {
+            'X-Api-Key': apiKey
+        }
+    })
+    if(!res.ok) {
+        throw Error("There was an issue getting this campsite")
+    }
+
+    const data = await res.json()
+    return data.data
+
 }

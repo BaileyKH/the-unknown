@@ -12,7 +12,6 @@ export const CampgroundList = () => {
     const [state, setState] = useState('co')
     const [inputValue, setInputValue] = useState(state)
     const [loading, setLoading] = useState(false)
-    const [error, setError] = useState(null)
 
     useEffect(() => {
         async function loadGrounds() {
@@ -21,7 +20,7 @@ export const CampgroundList = () => {
                 const data = await getCampgrounds(state)
                 setGrounds(data)
             } catch (err) {
-                setError(err)
+                console.error(err)
             } finally {
                 setLoading(false)
                 setInputValue("")
@@ -43,23 +42,25 @@ export const CampgroundList = () => {
     // Individual Campgrounds
     const groundEl = grounds.map(ground => (
         <div key={ground.id} className="flex flex-col max-w-[300px] bg-white/90 dark:bg-black/90 rounded-md m-4 md:m-10 shadow-lg border-2 border-primaryBrown/50 dark:border-white/30 border-solid">
-            {ground.images && ground.images.length > 0 ? (
-                <img src={ground.images[0].url} className="w-full h-[300px] object-cover rounded-t-md" alt={ground.images[0].altText}/>
-            ) : (
-                <img src="/src/assets/images/Image-Unavailable.svg" className="w-full h-[300px] object-cover rounded-t-md" alt="Image not available"/>
-            )}
-            <div className="flex flex-col justify-between my-4 px-2">
-                <p className="text-color font-bold mb-4">{ground.name}</p>
-                {ground.fees[0] ? (
-                    <div>
-                        <p className="text-color"><span className="bg-lime-500 dark:bg-amber-700 rounded-md px-2 py-1">Cost per night:</span> ${ground.fees[0].cost}</p>
-                    </div>
+            <Link to={ground.id}>
+                {ground.images && ground.images.length > 0 ? (
+                    <img src={ground.images[0].url} className="w-full h-[300px] object-cover rounded-t-md" alt={ground.images[0].altText}/>
                 ) : (
-                    <div>
-                        <span className="text-color bg-lime-500 dark:bg-amber-700 rounded-md px-2 py-1">Price Unavailable</span>
-                    </div>
+                    <img src="/src/assets/images/Image-Unavailable.svg" className="w-full h-[300px] object-cover rounded-t-md" alt="Image not available"/>
                 )}
-            </div>
+                <div className="flex flex-col justify-between my-4 px-2">
+                    <p className="text-color font-bold mb-4">{ground.name}</p>
+                    {ground.fees[0] ? (
+                        <div>
+                            <p className="text-color"><span className="bg-lime-500 dark:bg-amber-700 rounded-md px-2 py-1">Cost per night:</span> ${ground.fees[0].cost}</p>
+                        </div>
+                    ) : (
+                        <div>
+                            <span className="text-color bg-lime-500 dark:bg-amber-700 rounded-md px-2 py-1">Price Unavailable</span>
+                        </div>
+                    )}
+                </div>
+            </Link>
         </div>
     ));
 
@@ -79,6 +80,10 @@ export const CampgroundList = () => {
                         />
                         <button type="submit" className="md:hidden bg-slate-600 rounded-md mt-3 px-2 py-1">Search</button>
                     </form>
+                </div>
+                <div className="flex items-center justify-start">
+                    <p className="text-2xl font-bold text-color underline underline-offset-8 decoration-4">Campgrounds for:</p>
+                    <p className="text-2xl text-color ml-4">{state.toUpperCase()}</p>
                 </div>
                 <div className="flex flex-wrap justify-center">
                     {loading ? <Loading /> : groundEl}
