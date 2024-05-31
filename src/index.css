@@ -16,11 +16,19 @@
   }
 
   .text-color {
-    @apply text-primaryBrown dark:text-neutral-100
+    @apply text-primaryBrown dark:text-neutral-100/95
   }
 
   .active {
     @apply font-bold mr-8 md:text-lg text-[#ca8a04] dark:text-amber-700 underline underline-offset-8 
+  }
+
+  .campground-text {
+    @apply text-color text-xs md:text-base leading-relaxed
+  }
+
+  .campground-span {
+    @apply font-bold text-color text-sm md:text-lg bg-lime-500 dark:bg-amber-700/60 tracking-wide px-2 py-1 rounded-md mt-8
   }
 
 }
