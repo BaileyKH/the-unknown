@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useOutletContext } from "react-router-dom";
 
 import { getCampgrounds } from '/src/api.js'
+import { Loading } from "./Loading";
 
 export const CampgroundList = () => {
 
@@ -23,6 +24,7 @@ export const CampgroundList = () => {
                 setError(err)
             } finally {
                 setLoading(false)
+                setInputValue("")
             }
         }
 
@@ -32,24 +34,15 @@ export const CampgroundList = () => {
     function handleSubmit(event){
         event.preventDefault();
         setState(inputValue);
-        setInputValue("")
     }
 
     function handleChange(event){
         setInputValue(event.target.value)
     }
 
-    if (loading){
-        return <h1>Loading...</h1>
-    }
-
-    if (error){
-        return <h1>There was an error: {error.message}</h1>
-    }
-
     // Individual Campgrounds
     const groundEl = grounds.map(ground => (
-        <div key={ground.id} className="flex flex-col max-w-[300px] bg-white/90 dark:bg-black/90 rounded-md m-4 md:m-8 shadow-lg border-2 border-primaryBrown/50 dark:border-white/30 border-solid">
+        <div key={ground.id} className="flex flex-col max-w-[300px] bg-white/90 dark:bg-black/90 rounded-md m-4 md:m-10 shadow-lg border-2 border-primaryBrown/50 dark:border-white/30 border-solid">
             {ground.images && ground.images.length > 0 ? (
                 <img src={ground.images[0].url} className="w-full h-[300px] object-cover rounded-t-md" alt={ground.images[0].altText}/>
             ) : (
@@ -74,7 +67,7 @@ export const CampgroundList = () => {
             <div className={`${darkMode && "dark"}`}>
                 <div className="my-6 md:my-8 flex items-center justify-center flex-col md:flex-row">
                     <form onSubmit={handleSubmit} className="flex items-center justify-center flex-col md:flex-row">
-                        <label htmlFor="search-txt" className="text-color mb-2 md:mr-2">Please Enter a State</label>
+                        <label htmlFor="search-txt" className="text-color text-center mb-2 md:mb-0 md:mr-2">Please Enter a State</label>
                         <input 
                             id="search-txt"
                             type="text"
@@ -82,12 +75,13 @@ export const CampgroundList = () => {
                             name="searchText"
                             value={inputValue}
                             onChange={handleChange}
-                            className="rounded-md indent-1.5 px-2 py-1"
+                            className="rounded-md indent-1.5 px-2 py-1 dark:placeholder:text-black/60 bg-white/60 dark:bg-white/80 border border-slate-500/70"
                         />
+                        <button type="submit" className="md:hidden bg-slate-600 rounded-md mt-3 px-2 py-1">Search</button>
                     </form>
                 </div>
                 <div className="flex flex-wrap justify-center">
-                    {loading ? <h1>loading...</h1> : groundEl}
+                    {loading ? <Loading /> : groundEl}
                 </div>
             </div>
     );
