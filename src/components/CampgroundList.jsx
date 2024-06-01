@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useOutletContext } from "react-router-dom";
+import { Link, useOutletContext, useSearchParams } from "react-router-dom";
 
 import { getCampgrounds } from '/src/api.js'
 import { Loading } from "./Loading";
@@ -8,9 +8,14 @@ export const CampgroundList = () => {
 
     const { darkMode } = useOutletContext();
 
+    // const navigate = useNavigate();
+    const [searchParams, setSearchParams] = useSearchParams();
+
+    const initialState = searchParams.get('state') || 'co';
+
     const [grounds, setGrounds] = useState([])
-    const [state, setState] = useState('co')
-    const [inputValue, setInputValue] = useState(state)
+    const [state, setState] = useState(initialState)
+    const [inputValue, setInputValue] = useState(initialState)
     const [loading, setLoading] = useState(false)
 
     useEffect(() => {
@@ -33,6 +38,7 @@ export const CampgroundList = () => {
     function handleSubmit(event){
         event.preventDefault();
         setState(inputValue);
+        setSearchParams({ state: inputValue });
     }
 
     function handleChange(event){

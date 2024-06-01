@@ -16,7 +16,6 @@ export const CampgroundDetail = () => {
     const [groundsDetails, setGroundsDetails] = useState(null)
     const { id } = useParams()
     const [loading, setLoading] = useState(false)
-    const [error, setError] = useState()
 
     useEffect(() => {
         async function loadGround() {
@@ -25,13 +24,14 @@ export const CampgroundDetail = () => {
                 const data = await getCampground(id)
                 setGroundsDetails(data[0])
             } catch (err) {
-                setError(err)
+                console.error(err)
             } finally {
                 setLoading(false)
             }
         }
         loadGround()
     },[id])
+
 
     return(
         <div className={`${darkMode && "dark"}`}>
@@ -49,12 +49,12 @@ export const CampgroundDetail = () => {
                         <div className="flex flex-col justify-center items-start">
                             <div className="camp-card relative">
                                 <IconSun stroke={2} className="camp-card-icon"/>
-                                <p className="campground-text"><span className="campground-span">Weather</span> {groundsDetails.weatherOverview}</p>
+                                <p className="campground-text"><span className="campground-span">Weather</span> {groundsDetails.weatherOverview ? groundsDetails.weatherOverview : "No Weather Available"}</p>
                             </div>
 
                             <div className="camp-card relative">
                                 <IconTent stroke={2} className="camp-card-icon"/>
-                                <p className="campground-text"><span className="campground-span">Total campsites</span> {groundsDetails.campsites.totalSites}</p>
+                                <p className="campground-text"><span className="campground-span">Total campsites</span> {groundsDetails.campsites.totalSites ? groundsDetails.campsites.totalSites : "Available site details unavailable"}</p>
                             </div>
 
                             <div className="camp-card relative">
