@@ -41,7 +41,7 @@ export const CampgroundList = () => {
 
     // Individual Campgrounds
     const groundEl = grounds.map(ground => (
-        <div key={ground.id} className="flex flex-col max-w-[300px] bg-white/90 dark:bg-black/90 rounded-md m-4 md:m-10 shadow-lg border-2 border-primaryBrown/50 dark:border-white/30 border-solid">
+        <div key={ground.id} className="flex flex-col max-w-[300px] bg-white bg-gradient-to-t from-white via-lime-700 to-lime-700/50 via-[50%] dark:bg-black dark:bg-gradient-to-t dark:from-black dark:via-purple-900 dark:to-purple-900/50 rounded-md m-4 md:m-10 shadow-lg border-2 border-primaryBrown/50 dark:border-white/30 border-solid">
             <Link to={ground.id}>
                 {ground.images && ground.images.length > 0 ? (
                     <img src={ground.images[0].url} className="w-full h-[300px] object-cover rounded-t-md" alt={ground.images[0].altText}/>

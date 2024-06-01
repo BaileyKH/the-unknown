@@ -12,7 +12,7 @@ export default {
       },
       colors: {
         bgLight: "#c8f781",
-        bgDark: "#1c1c1c",
+        bgDark: "#0f0f0f",
         primaryBrown: "#66431f",
       },
       backgroundImage: {

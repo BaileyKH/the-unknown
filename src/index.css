@@ -28,7 +28,11 @@
   }
 
   .campground-span {
-    @apply font-bold text-color text-sm md:text-lg bg-lime-500 dark:bg-amber-700/60 tracking-wide px-2 py-1 rounded-md mt-8
+    @apply font-bold text-color text-sm md:text-lg bg-yellow-600/70 dark:bg-amber-700/60 tracking-wide px-2 py-1 rounded-md mt-8
+  }
+
+  .camp-card {
+    @apply bg-lime-500/50 dark:bg-[#1c1c1c] mt-10 md:mt-16 py-4 px-8 md:py-8 md:px-16 rounded-lg border border-primaryBrown/70 dark:border-white/70
   }
 
 }
