@@ -2,8 +2,15 @@ import { Link, useOutletContext } from "react-router-dom";
 
 import { IconExclamationMark } from '@tabler/icons-react';
 
+import { ProductBanner } from "../components/ProductBanner";
+
 import heroImg from '/src/assets/images/day-hero.svg'
 import darkHero from '/src/assets/images/hero-night.svg'
+import lightBag from '/src/assets/images/backpack-light.svg'
+import darkBag from '/src/assets/images/backpack-dark.svg'
+import lTable from '/src/assets/images/table-light.svg'
+import dTable from '/src/assets/images/table-dark.svg'
+
 
 export const Home = () => {
 
@@ -31,7 +38,15 @@ export const Home = () => {
                         </Link>
                     </div>
                 </div>
-                <h1>Body</h1>
+                <ProductBanner 
+                    light={lightBag}
+                    dark={darkBag}
+                />
+                <br></br>
+                <ProductBanner 
+                    light={lTable}
+                    dark={dTable}
+                />
             </div>
         </div>
     );

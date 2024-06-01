@@ -36,7 +36,7 @@
   }
 
   .camp-card-icon {
-    @apply absolute -right-2 -top-2 text-black bg-yellow-300 drop-shadow-2xl rounded-full
+    @apply absolute -right-2 -top-2 w-[28px] h-[28px] p-1 text-black bg-yellow-300 rounded-full drop-shadow-md
   }
 
 }
