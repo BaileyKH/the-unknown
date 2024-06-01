@@ -17,7 +17,7 @@ export default {
       },
       backgroundImage: {
         'hero-bg': "url('/src/assets/images/day-hero.svg')",
-      }
+      },
     },
   },
   plugins: [],

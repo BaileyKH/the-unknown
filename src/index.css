@@ -20,7 +20,7 @@
   }
 
   .active {
-    @apply font-bold mr-8 md:text-lg text-[#ca8a04] dark:text-amber-700 underline underline-offset-8 
+    @apply font-bold mr-8 md:text-lg text-[#ca8a04] dark:text-amber-700 underline underline-offset-8
   }
 
   .campground-text {
@@ -32,7 +32,11 @@
   }
 
   .camp-card {
-    @apply bg-lime-500/50 dark:bg-[#1c1c1c] mt-10 md:mt-16 py-4 px-8 md:py-8 md:px-16 rounded-lg border border-primaryBrown/70 dark:border-white/70
+    @apply bg-lime-500/50 dark:bg-[#1c1c1c] mt-10 md:mt-16 py-4 px-8 md:py-8 md:px-16 rounded-lg border border-primaryBrown/70 dark:border-white/70 shadow-xl dark:shadow-zinc-600/10
+  }
+
+  .camp-card-icon {
+    @apply absolute -right-2 -top-2 text-black bg-yellow-300 drop-shadow-2xl rounded-full
   }
 
 }
