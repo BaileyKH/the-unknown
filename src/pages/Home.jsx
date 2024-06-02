@@ -41,11 +41,13 @@ export const Home = () => {
                 <ProductBanner 
                     light={lightBag}
                     dark={darkBag}
+                    alt={"camping backpack"}
                 />
                 <br></br>
                 <ProductBanner 
                     light={lTable}
                     dark={dTable}
+                    alt={"camping picnic table"}
                 />
             </div>
         </div>
