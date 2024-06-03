@@ -98,6 +98,3 @@ export const CampgroundDetail = () => {
     );
 }
 
-// Reservation Stuff:
-// .reservationUrl
-// .regulationsOverview
