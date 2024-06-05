@@ -6,9 +6,13 @@ export const Footer = () => {
 
     const { darkMode } = useContext(DarkModeContext)
 
+    const year = new Date().getFullYear();
+
     return(
-        <div className={`${darkMode && "dark"}`}>
-            <div className="h-20 background"></div>
+        <div className="bg-lime-500 dark:bg-orange-600 mt-4 md:mt-8">
+            <div className="flex justify-center">
+                <p className="text-color text-xs md:text-base dark:text-bgDark">{`© ${year} BaileyKH. All Rights Reserved.`}</p>
+            </div>
         </div>
     );
 }

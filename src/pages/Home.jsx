@@ -10,6 +10,7 @@ import lightBag from '/src/assets/images/backpack-light.svg'
 import darkBag from '/src/assets/images/backpack-dark.svg'
 import lTable from '/src/assets/images/table-light.svg'
 import dTable from '/src/assets/images/table-dark.svg'
+import { Trending } from "../components/Trending";
 
 
 export const Home = () => {
@@ -37,6 +38,9 @@ export const Home = () => {
                             </button>
                         </Link>
                     </div>
+                </div>
+                <div className="mx-8 md:mx-16">
+                    <Trending />
                 </div>
                 <ProductBanner 
                     light={lightBag}

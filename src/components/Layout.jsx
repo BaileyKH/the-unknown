@@ -32,7 +32,7 @@ export const Layout = () => {
             <main>
                 <Outlet context={{ darkMode }}/>
             </main>
-            {/* <Footer /> */}
+            <Footer />
         </DarkModeContext.Provider>
     );
 }

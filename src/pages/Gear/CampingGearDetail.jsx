@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { gearData } from "/src/GearData.js";
+import { Trending } from "../../components/Trending";
 
 export const CampingGearDetail = () => {
 
@@ -42,12 +43,12 @@ export const CampingGearDetail = () => {
     if (!gearItem) return <div>Loading...</div>;
 
     return (
-        <div className="mx-8 md:mx-16">
+        <div className="mx-8 md:mx-16 my-4 md:my-8">
             <div className="flex flex-col md:flex-row">
                 <div className="md:w-1/2">
                     <img src={gearItem.img} alt={gearItem.item} className="rounded-lg"/>
                 </div>
-                <div className="md:w-1/2 flex mt-4 md:mt-0 md:flex-col px-2 md:px-8">
+                <div className="md:w-1/2 flex justify-between md:justify-normal items-start mt-4 md:mt-0 md:flex-col px-2 md:px-8">
                     <div>
                         <p className="text-color dark:text-orange-600 underline underline-offset-4">{gearItem.brand}</p>
                         <p className="text-color text-lg md:text-2xl font-bold mt-1 mb-4">{gearItem.item}</p>
@@ -67,6 +68,7 @@ export const CampingGearDetail = () => {
             <div className="bg-white/60 dark:bg-white/30 rounded-md mt-12">
                 <p className="text-color font-bold text-sm md:text-lg text-center leading-loose tracking-wider drop-shadow-md p-4 md:p-8">{gearItem.description}</p>
             </div>
+            <Trending />
         </div>
     );
 }
