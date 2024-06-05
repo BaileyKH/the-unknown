@@ -1,15 +1,19 @@
-import { useState } from "react";
-import { Link, useOutletContext } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import { gearData } from "/src/GearData.js";
 
 export const CampingGear = () => {
 
-    const { darkMode } = useOutletContext()
-    const [gearList, setGearList] = useState(gearData())
+    const [gearList, setGearList] = useState([])
+
+    useEffect(() => {
+        const gearItems = gearData();
+        setGearList(gearItems);
+    }, []);
 
     return(
-        <div className={`${darkMode && "dark"}`}>
+        <div>
             <div className="relative bg-[url('/src/assets/gear/gear-hero.jpg')] bg-cover bg-center min-h-96 md:min-h-[550px]">
                 <h1 className="absolute text-lime-600 dark:text-white text-center font-jaini w-full -bottom-6 md:-bottom-12 text-6xl md:text-9xl tracking-wider drop-shadow-xl">
                     Camping Gear
@@ -22,7 +26,7 @@ export const CampingGear = () => {
                 <div className="flex flex-wrap justify-center gap-10 bg-primaryBrown/80 dark:bg-[#1c1c1c] rounded-md my-10 py-12">
                     {gearList.map(gear => (
                         <div key={gear.id}>
-                            <div className="flex flex-col justify-center items-start w-[300px] rounded-md bg-white/60 dark:bg-white/30 p-4">
+                            <div className="flex flex-col justify-center items-start w-[350px] rounded-md bg-white/60 dark:bg-white/30 p-4">
                                 <Link to={`/gear/${gear.id}`}>
                                     <img src={gear.img} className="overflow-hidden rounded-t-md"/>
                                     <p className="text-color font-bold text-xl tracking-wider mt-4">{gear.brand}</p>

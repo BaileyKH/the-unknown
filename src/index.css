@@ -16,11 +16,11 @@
   }
 
   .text-color {
-    @apply text-primaryBrown dark:text-neutral-100/95
+    @apply text-primaryBrown dark:text-neutral-100
   }
 
   .active {
-    @apply font-bold mr-8 md:text-lg text-[#ca8a04] dark:text-amber-700 underline underline-offset-8
+    @apply font-bold mr-8 md:text-lg text-[#ca8a04] dark:text-orange-600 underline underline-offset-8
   }
 
   .campground-text {
@@ -28,7 +28,7 @@
   }
 
   .campground-span {
-    @apply font-bold text-color text-sm md:text-lg bg-yellow-600/70 dark:bg-amber-700/60 tracking-wide px-2 py-1 rounded-md mt-8
+    @apply font-bold text-color text-sm md:text-lg bg-yellow-600/70 dark:bg-orange-600 tracking-wide px-2 py-1 rounded-md mt-8
   }
 
   .camp-card {
@@ -37,6 +37,21 @@
 
   .camp-card-icon {
     @apply absolute -right-2 -top-2 w-[28px] h-[28px] p-1 text-black bg-yellow-300 rounded-full drop-shadow-md
+  }
+
+  .no-spin::-webkit-inner-spin-button,
+  .no-spin::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .no-spin {
+    appearance: textfield;
+    -moz-appearance: textfield; 
+  }
+
+  .quantity-btn {
+    @apply bg-lime-500 dark:bg-white/10 text-sm md:text-base text-primaryBrown dark:text-orange-600 text-center border-2 border-black/40 dark:border-white/60 rounded-md py-1 px-2 cursor-pointer
   }
 
 }
