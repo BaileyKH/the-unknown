@@ -10,6 +10,13 @@ import lightBag from '/src/assets/images/backpack-light.svg'
 import darkBag from '/src/assets/images/backpack-dark.svg'
 import lTable from '/src/assets/images/table-light.svg'
 import dTable from '/src/assets/images/table-dark.svg'
+
+import tent from '/src/assets/categories/tent.svg'
+import bag from '/src/assets/categories/backpack.svg'
+import sleep from '/src/assets/categories/sleeping-bag.svg'
+import stove from '/src/assets/categories/stove.svg'
+import shirt from '/src/assets/categories/shirt.svg'
+
 import { Trending } from "../components/Trending";
 
 
@@ -24,12 +31,12 @@ export const Home = () => {
                     <img src={darkMode ? darkHero : heroImg} 
                         alt={darkMode ? "Spooky forest with tent" : "Sunny forest with tent"}
                     />
-                    <div className="absolute bg-white/90 dark:bg-black/90 rounded-md px-4 md:px-8 py-4 mx-4 drop-shadow-2xl">
+                    <div className="absolute z-10 bg-white/90 dark:bg-black/90 rounded-md px-4 md:px-8 py-4 mx-4 drop-shadow-2xl">
                         <IconExclamationMark stroke={2} className="absolute -left-2 -top-2 text-black bg-yellow-300 drop-shadow-2xl rounded-full"/>
-                        <h1 className="text-color text-2xl md:text-4xl lg:text-6xl font-bold drop-shadow-md">
+                        <h1 className="text-color text-xl md:text-4xl lg:text-6xl font-bold drop-shadow-md">
                             Adventure into the Unknown
                         </h1>
-                        <p className="text-color text-lg lg:text-xl mt-2">
+                        <p className="text-color text-base lg:text-xl mt-2">
                             Keep exploring with all the latest gear from the brands you love!
                         </p>
                         <Link to="/gear">
@@ -41,6 +48,26 @@ export const Home = () => {
                 </div>
                 <div className="mx-8 md:mx-16">
                     <Trending />
+                </div>
+                <div className="mx-8 md:mx-16">
+                    <h2>Top Categories</h2>
+                    <div>
+                        <div>
+                            <p>Tents</p>
+                        </div>
+                        <div>
+                            <p>Backpacks</p>
+                        </div>
+                        <div>
+                            <p>Sleeping Bags</p>
+                        </div>
+                        <div>
+                            <p>Kitchen</p>
+                        </div>
+                        <div>
+                            <p>Clothes</p>
+                        </div>
+                    </div>
                 </div>
                 <ProductBanner 
                     light={lightBag}

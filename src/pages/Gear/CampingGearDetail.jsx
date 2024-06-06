@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation, Link } from "react-router-dom";
+
 import { gearData } from "/src/GearData.js";
 import { Trending } from "../../components/Trending";
 
 export const CampingGearDetail = () => {
 
-    const { id } = useParams();
     const [gearItem, setGearItem] = useState(null);
     const [quantity, setQuantity] = useState(1);
+    const { id } = useParams();
+    const location = useLocation()
 
     const maxQuantity = 10
+
 
     useEffect(() => {
         const gearItems = gearData();
@@ -31,7 +34,6 @@ export const CampingGearDetail = () => {
       };
 
       const handleChange = (e) => {
-
         const val = parseInt(e.target.value, 10);
         
         if (!isNaN(val) && val <= maxQuantity && val >= 1) {
@@ -42,8 +44,17 @@ export const CampingGearDetail = () => {
 
     if (!gearItem) return <div>Loading...</div>;
 
+    const search = location.state?.search || ""
+    const category = location.state?.category || "all"
+
+    console.log(search)
+    console.log(category)
+
     return (
         <div className="mx-8 md:mx-16 my-4 md:my-8">
+          <Link to={`..${search}`} relative="path" className="text-color">
+            &larr; Back to {category}
+          </Link>
             <div className="flex flex-col md:flex-row">
                 <div className="md:w-1/2">
                     <img src={gearItem.img} alt={gearItem.item} className="rounded-lg"/>

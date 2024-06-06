@@ -50,8 +50,20 @@
     -moz-appearance: textfield; 
   }
 
+  .not-selected {
+    @apply border-2 border-lime-500 dark:border-orange-600 px-2 py-1 rounded-md text-color
+  }
+
+  .selected {
+    @apply border-2 border-lime-500 dark:border-orange-600 bg-lime-500 dark:bg-orange-600 text-color px-2 py-1 rounded-md
+  }
+
   .quantity-btn {
     @apply bg-lime-500 dark:bg-white/10 text-sm md:text-base text-primaryBrown dark:text-orange-600 text-center border-2 border-black/40 dark:border-white/60 rounded-md py-1 px-2 cursor-pointer
+  }
+
+  .footer-nav {
+    @apply text-sm md:text-lg text-color dark:text-black mx-4 md:mx-8 cursor-pointer hover:underline hover:underline-offset-2
   }
 
 }

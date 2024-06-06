@@ -8,7 +8,7 @@ export const CampgroundList = () => {
 
     const [searchParams, setSearchParams] = useSearchParams();
 
-    const initialState = searchParams.get('state') || 'co';
+    const initialState = searchParams.get('state') || 'ca';
 
     const [grounds, setGrounds] = useState([])
     const [state, setState] = useState(initialState)
