@@ -19,6 +19,14 @@
     @apply text-primaryBrown dark:text-neutral-100
   }
 
+  .top-cat-text {
+    @apply text-center text-color mt-2 text-xs md:text-base tracking-wide
+  }
+
+  .top-cat-img {
+    @apply w-20 md:w-52 rounded-lg shadow-lg
+  }
+
   .active {
     @apply font-bold mr-8 md:text-lg text-[#ca8a04] dark:text-orange-600 underline underline-offset-8
   }
@@ -51,7 +59,7 @@
   }
 
   .not-selected {
-    @apply border-2 border-lime-500 dark:border-orange-600 px-2 py-1 rounded-md text-color
+    @apply border-2 border-lime-500 dark:border-orange-600 px-2 py-1 rounded-md text-white
   }
 
   .selected {

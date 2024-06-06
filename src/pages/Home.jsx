@@ -49,31 +49,46 @@ export const Home = () => {
                 <div className="mx-8 md:mx-16">
                     <Trending />
                 </div>
-                <div className="mx-8 md:mx-16">
-                    <h2>Top Categories</h2>
-                    <div>
-                        <div>
-                            <p>Tents</p>
-                        </div>
-                        <div>
-                            <p>Backpacks</p>
-                        </div>
-                        <div>
-                            <p>Sleeping Bags</p>
-                        </div>
-                        <div>
-                            <p>Kitchen</p>
-                        </div>
-                        <div>
-                            <p>Clothes</p>
-                        </div>
-                    </div>
-                </div>
                 <ProductBanner 
                     light={lightBag}
                     dark={darkBag}
                     alt={"camping backpack"}
                 />
+                <div className="mx-8 md:mx-16 my-10 md:my-20">
+                    <h2 className="text-color text-lg md:text-2xl font-bold underline underline-offset-8 mb-3 md:mb-6">Top Categories</h2>
+                    <div className="flex flex-wrap justify-center gap-6 md:gap-24">
+                        <div>
+                            <Link to="/gear?category=tent">
+                                <img src={tent} className="top-cat-img"/>
+                                <p className="top-cat-text">Tents</p>
+                            </Link>
+                        </div>
+                        <div>
+                            <Link to="/gear?category=backpack">
+                                <img src={bag} className="top-cat-img"/>
+                                <p className="top-cat-text">Backpacks</p>
+                            </Link>
+                        </div>
+                        <div>
+                            <Link to='/gear?category=sleeping+bag'>
+                                <img src={sleep} className="top-cat-img"/>
+                                <p className="top-cat-text">Sleeping Bags</p>
+                            </Link>
+                        </div>
+                        <div>
+                            <Link to='/gear?category=kitchen'>
+                                <img src={stove} className="top-cat-img"/>
+                                <p className="top-cat-text">Kitchen</p>
+                            </Link>
+                        </div>
+                        <div>
+                            <Link to='/gear?category=clothes'>
+                                <img src={shirt} className="top-cat-img"/>
+                                <p className="top-cat-text">Clothes</p>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
                 <br></br>
                 <ProductBanner 
                     light={lTable}

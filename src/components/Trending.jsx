@@ -19,12 +19,12 @@ export const Trending = () => {
     const [trendingGear, setTrendingGear] = useState(gearData())
 
     return (
-        <div className="my-8 md:my-16">
+        <div className="my-10 md:my-20">
             <p className="text-lg md:text-2xl font-bold text-color underline underline-offset-8 mb-3 md:mb-6">Trending Now</p>
             <Swiper
             modules={[Navigation, Pagination, Scrollbar, A11y]}
             spaceBetween={20}
-            slidesPerView={3}
+            slidesPerView={4}
             navigation
             pagination={{ clickable: true }}
             scrollbar={{ draggable: true }}
