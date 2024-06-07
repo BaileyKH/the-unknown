@@ -11,8 +11,8 @@ export const Campgrounds = () => {
     const { darkMode } = useOutletContext();
 
     return (
-        <div className="mx-8">
-            <div className="flex items-center justify-center">
+        <div className="mx-8 ">
+            <div className="flex items-center justify-center ">
                 <img src={darkMode ? darkPark : lightPark} className="rounded-b-xl"/>
                 <div className="absolute bg-white/90 dark:bg-black/90 mx-16 px-4 py-2 md:px-8 md:py-4 rounded-md drop-shadow-2xl">
                     <img src={tent} className="absolute -left-2 -top-2 p-1 text-black bg-yellow-300 drop-shadow-2xl rounded-full"/>
@@ -24,8 +24,8 @@ export const Campgrounds = () => {
                     </p>
                 </div>
             </div>
-            <div className="flex flex-col items-center justify-center my-6 md:my-8">
-                <h2 className="text-color font-bold text-2xl md:text-3xl bg-lime-700/50 dark:bg-purple-900/50 rounded-md px-2 py-1 md:px-4 md:py-2">
+            <div className="flex flex-col items-center justify-center my-6 md:my-8 bg-primaryBrown/80 dark:bg-[#1c1c1c] rounded-md pt-8 space-x-4">
+                <h2 className="text-white font-bold text-2xl md:text-3xl bg-lime-500 dark:bg-purple-900/50 rounded-md px-2 py-1 md:px-4 md:py-2">
                     Search for Campgrounds
                 </h2>
                 <CampgroundList />

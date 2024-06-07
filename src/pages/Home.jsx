@@ -17,6 +17,11 @@ import sleep from '/src/assets/categories/sleeping-bag.svg'
 import stove from '/src/assets/categories/stove.svg'
 import shirt from '/src/assets/categories/shirt.svg'
 
+import tentB1 from '/src/assets/categories/tent-b1.jpg'
+import tentB2 from '/src/assets/categories/tent-b2.jpg'
+
+import explore from '/src/assets/categories/campgrounds.jpg'
+
 import { Trending } from "../components/Trending";
 
 
@@ -32,7 +37,7 @@ export const Home = () => {
                         alt={darkMode ? "Spooky forest with tent" : "Sunny forest with tent"}
                     />
                     <div className="absolute z-10 bg-white/90 dark:bg-black/90 rounded-md px-4 md:px-8 py-4 mx-4 drop-shadow-2xl">
-                        <IconExclamationMark stroke={2} className="absolute -left-2 -top-2 text-black bg-yellow-300 drop-shadow-2xl rounded-full"/>
+                        <IconExclamationMark stroke={2} className="absolute animate-bounce -left-2 -top-2 text-black bg-yellow-300 drop-shadow-2xl rounded-full"/>
                         <h1 className="text-color text-xl md:text-4xl lg:text-6xl font-bold drop-shadow-md">
                             Adventure into the Unknown
                         </h1>
@@ -46,17 +51,31 @@ export const Home = () => {
                         </Link>
                     </div>
                 </div>
+                <div className="my-10 md:my-20 mx-8 md:mx-16">
+                    <h2 className="text-color text-lg md:text-2xl font-bold underline underline-offset-8 mb-3 md:mb-6">Find your perfect Tent</h2>
+                    <div className="w-full flex gap-4">
+                        <div className="w-1/2">
+                            <img src={tentB1} className="rounded-lg"/>
+                        </div>
+                        <div className="w-1/2">
+                            <img src={tentB2} className="rounded-lg"/>
+                        </div>
+                    </div>
+                    <Link to="/gear?category=tent" className="flex justify-center items-center bg-lime-500 dark:bg-orange-600 py-2 text-lg md:text-xl font-bold tracking-wider text-color rounded-md mt-4 shadow-md active:shadow-none">Shop Tents</Link>
+                </div>
                 <div className="mx-8 md:mx-16">
                     <Trending />
                 </div>
                 <ProductBanner 
                     light={lightBag}
                     dark={darkBag}
+                    title={"Get the best prices on new backpacks now!"}
+                    link={"/gear?category=backpack"}
                     alt={"camping backpack"}
                 />
                 <div className="mx-8 md:mx-16 my-10 md:my-20">
                     <h2 className="text-color text-lg md:text-2xl font-bold underline underline-offset-8 mb-3 md:mb-6">Top Categories</h2>
-                    <div className="flex flex-wrap justify-center gap-6 md:gap-24">
+                    <div className="flex flex-wrap justify-center gap-x-6 gap-y-4 md:gap-x-12">
                         <div>
                             <Link to="/gear?category=tent">
                                 <img src={tent} className="top-cat-img"/>
@@ -93,8 +112,17 @@ export const Home = () => {
                 <ProductBanner 
                     light={lTable}
                     dark={dTable}
+                    title={"Latest in camping cookware!"}
+                    link={"/gear?category=kitchen"}
                     alt={"camping picnic table"}
                 />
+                <div className="flex justify-center overflow-hidden h-80 w-full mt-8 md:mt-16">
+                    <img src={explore} className="relative w-full object-cover brightness-50"/>
+                    <div className="absolute text-center mt-8 md:mt-4">
+                        <h2 className="font-jaini text-white text-6xl md:text-9xl drop-shadow-2xl tracking-wide mb-12">Explore <span className="text-3xl md:text-6xl">the</span> Unknown</h2>
+                        <Link to="/grounds" className="bg-black text-white px-6 py-3 rounded-md text-xl font-bold shadow-lg">Camp Now</Link>
+                    </div>
+                </div>
             </div>
         </div>
     );

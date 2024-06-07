@@ -10,7 +10,7 @@ export const Footer = () => {
     }
 
     return(
-        <div className="bg-lime-500 dark:bg-orange-600 mt-4 md:mt-8 py-4">
+        <div className="bg-lime-500 dark:bg-orange-600 py-4">
             <div className="flex flex-col items-center mb-8 py-4 md:py-8">
                 <div>
                     <p className="font-bold text-sm md:text-lg tracking-wide text-color dark:text-black mb-2">Newsletter</p>

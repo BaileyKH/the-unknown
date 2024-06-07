@@ -7,6 +7,7 @@ import { NotFound } from './pages/NotFound';
 import { CampgroundDetail } from './pages/Campgrounds/CampgroundDetail';
 import { CampingGear } from './pages/Gear/CampingGear';
 import { CampingGearDetail } from './pages/Gear/CampingGearDetail';
+import { Cart } from './pages/Cart';
 
 
 
@@ -22,6 +23,7 @@ function App() {
             <Route path="/gear/:id" element={<CampingGearDetail />} />
             <Route path="/grounds" element={<Campgrounds />} />
             <Route path="grounds/:id" element={<CampgroundDetail />} />
+            <Route path="/cart" element={<Cart />} />
 
             <Route path="*" element={<NotFound />} />
           </Route>

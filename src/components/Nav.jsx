@@ -19,7 +19,7 @@ export const Nav = () => {
                     <div className="hidden md:flex items-center justify-center">
                         <NavLink to="/gear" className={({ isActive }) => (isActive ? "active" : "nav-link")}>Camping Gear</NavLink>
                         <NavLink to="/grounds" className={({ isActive }) => (isActive ? "active" : "nav-link")}>Campgrounds</NavLink>
-                        <IconShoppingCart stroke={1.5} className="mr-8 pr-8 w-14 text-color border-primaryBrown border-r dark:border-neutral-100" />
+                        <Link to="/cart"><IconShoppingCart stroke={1.5} className="mr-8 pr-8 w-14 text-color border-primaryBrown border-r dark:border-neutral-100" /></Link>
                         <img onClick={toggleDarkMode} src={darkMode ? "/src/assets/images/dark-lantern.svg" : "/src/assets/images/light-lantern.svg"} 
                             className="w-10 cursor-pointer bg-[#ca8a04] dark:bg-[#44403c] rounded-full drop-shadow"
                             aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
@@ -36,7 +36,7 @@ export const Nav = () => {
                                 <Link to="/" onClick={toggleMobileNav} className="text-color">Home</Link>
                                 <Link to="/gear" onClick={toggleMobileNav} className="text-color">Camping Gear</Link>
                                 <Link to="/grounds" onClick={toggleMobileNav} className="text-color">Campgrounds</Link>
-                                <IconShoppingCart stroke={1.5} className="w-6 h-6  mx-auto text-color" />
+                                <Link to="/cart"><IconShoppingCart stroke={1.5} className="w-6 h-6  mx-auto text-color" /></Link>
                                 <img onClick={toggleDarkMode} src={darkMode ? "/src/assets/images/dark-lantern.svg" : "/src/assets/images/light-lantern.svg"} 
                                     className="w-10 mx-auto cursor-pointer bg-[#ca8a04] dark:bg-[#44403c] rounded-full drop-shadow"
                                     aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
