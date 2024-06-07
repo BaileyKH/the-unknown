@@ -71,7 +71,7 @@ export const CampgroundList = () => {
             <div>
                 <div className="my-6 md:my-8 flex items-center justify-center flex-col md:flex-row">
                     <form onSubmit={handleSubmit} className="flex items-center justify-center flex-col md:flex-row">
-                        <label htmlFor="search-txt" className="text-lime-500 dark:text-white text-center mb-2 md:mb-0 md:mr-2">Please Enter a State</label>
+                        <label htmlFor="search-txt" className="text-lime-500 dark:text-white text-center mb-2 md:mb-0 md:mr-2">Please Enter a State:</label>
                         <input 
                             id="search-txt"
                             type="text"
