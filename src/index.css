@@ -32,11 +32,11 @@
   }
 
   .campground-text {
-    @apply text-color text-sm md:text-base leading-relaxed
+    @apply text-color text-xs md:text-base leading-relaxed
   }
 
   .campground-span {
-    @apply font-bold text-color text-base md:text-lg bg-yellow-600/70 dark:bg-orange-600 tracking-wide px-2 py-1 rounded-md mt-8
+    @apply font-bold text-color text-sm md:text-lg bg-yellow-600/70 dark:bg-orange-600 tracking-wide px-2 py-1 rounded-md mt-8
   }
 
   .camp-card {

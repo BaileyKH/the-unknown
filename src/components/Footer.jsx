@@ -27,7 +27,7 @@ export const Footer = () => {
                     <button type="submit" onClick={handleSubmit} className="text-sm md:text-base text-color dark:text-black bg-white rounded-md shadow-lg active:shadow-none ml-2 py-1 px-2">Subscribe</button>
                 </div>
             </div>
-            <div className="flex justify-center my-6 md:my-10">
+            <div className="flex justify-center text-center my-6 md:my-10">
                 <p className="footer-nav">About</p>
                 <p className="footer-nav">FAQs</p>
                 <p className="footer-nav">News</p>
