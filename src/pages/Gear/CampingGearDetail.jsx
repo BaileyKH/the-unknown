@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useLocation, Link } from "react-router-dom";
+
 import { gearData } from "/src/GearData.js";
 import { Trending } from "/src/components/Trending.jsx";
 import { useCart } from "/src/components/CartContext.jsx";
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const CampingGearDetail = () => {
     const [gearItem, setGearItem] = useState(null);
@@ -39,6 +43,12 @@ export const CampingGearDetail = () => {
             setQuantity(val);
         }
     };
+
+    const addItemToCart = () => {
+        return addToCart({ ...gearItem, quantity })
+    }
+
+    const notify = () => toast(`💼 Item added to cart!`);
 
     if (!gearItem) return <div>Loading...</div>;
 
@@ -100,11 +110,23 @@ export const CampingGearDetail = () => {
                             </button>
                         </div>
                         <button
-                            onClick={() => addToCart({ ...gearItem, quantity })}
+                            onClick={() => {addItemToCart(); notify();}}
                             className="md:text-left mt-4 text-color font-bold text-lg md:text-xl bg-lime-500 dark:bg-orange-600 w-max py-1 md:py-2 px-2 md:px-4 rounded-md shadow-lg active:shadow-none"
                         >
                             Add to Cart
                         </button>
+                        <ToastContainer
+                            position="top-right"
+                            autoClose={3000}
+                            hideProgressBar
+                            newestOnTop={false}
+                            closeOnClick
+                            rtl={false}
+                            pauseOnFocusLoss={false}
+                            draggable
+                            pauseOnHover={false}
+                            theme="dark"
+                        />
                     </div>
                 </div>
             </div>

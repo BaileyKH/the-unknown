@@ -1,8 +1,24 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useCart } from '/src/components/CartContext.jsx';
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 export const Cart = () => {
-  const { cart, removeFromCart, updateQuantity, totalPrice } = useCart();
+  const { cart, clearCart, removeFromCart, updateQuantity, totalPrice } = useCart();
+  const navigate = useNavigate()
+  const to = location.state?.to || "/"
+
+  const notify = () => toast(`💼 Thank you for your order!`);
+
+  function handleCheckout() {
+    notify()
+    setTimeout(() => {
+        clearCart()
+        navigate(to, { replace: true })
+    }, 2001)
+  }
 
   return (
     <div className="mx-8 md:mx-16 my-4 md:my-8">
@@ -58,9 +74,21 @@ export const Cart = () => {
             </div>
             <div className="flex justify-between mt-6">  
                 <p></p>
-                <button className="text-color font-bold tracking-wide bg-white dark:bg-orange-600 px-2 py-2 w-fit rounded-md">Check Out</button>
+                <button onClick={handleCheckout} className="text-color font-bold tracking-wide bg-white dark:bg-orange-600 px-2 py-2 w-fit rounded-md">Check Out</button>
             </div>
         </div>
+        <ToastContainer
+            position="top-right"
+            autoClose={2000}
+            hideProgressBar
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss={false}
+            draggable
+            pauseOnHover={false}
+            theme="dark"
+        />
       </div>
     </div>
   );
