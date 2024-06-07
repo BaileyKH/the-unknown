@@ -50,7 +50,7 @@ export const Nav = () => {
                                     <Link to="/cart" onClick={toggleMobileNav}><IconShoppingCart stroke={1.5} className="w-6 h-6  mx-auto text-color" /></Link>
                                     {totalItems > 0 ? <p className="absolute -top-3 left-4 text-black bg-yellow-300 drop-shadow-2xl rounded-full px-2">{totalItems}</p> : null}
                                 </div>
-                                <img onClick={toggleDarkMode} src={darkMode ? "/src/assets/images/dark-lantern.svg" : "/src/assets/images/light-lantern.svg"} 
+                                <img onClick={toggleDarkMode} src={darkMode ? darkL : lightL} 
                                     className="w-10 mx-auto cursor-pointer bg-[#ca8a04] dark:bg-[#44403c] rounded-full drop-shadow"
                                     aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
                                 />
