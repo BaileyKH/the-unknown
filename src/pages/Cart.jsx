@@ -94,33 +94,3 @@ export const Cart = () => {
   );
 };
 
-
-{/* <div key={item.id} className="flex items-center justify-between my-4 w-3/4">
-                <div className="flex items-center">
-                    <img src={item.img} alt={item.item} className="w-16 h-16 rounded-md" />
-                    <div className="flex flex-col items-center">
-                        <p className="font-bold">{item.item}</p>
-                        <div className="flex flex-row">
-                            <input
-                                type="number"
-                                value={item.quantity}
-                                onChange={(e) => updateQuantity(item.id, parseInt(e.target.value, 10))}
-                                min="1"
-                                max="10"
-                                className="w-12 text-center border-2 border-gray-300 rounded-md mx-2"
-                            />
-                            <button onClick={() => removeFromCart(item.id)} className="text-red-500 font-bold">Remove</button>
-                        </div>
-                    </div>
-                </div>
-                <div className="ml-4">
-                    <p>${item.price}</p>
-                </div>
-
-            </div>
-            ))
-        )}
-        <div className="mt-8 w-1/4">
-            <h2 className="text-xl font-bold">Total: ${totalPrice}</h2>
-        </div>
-</div> */}
