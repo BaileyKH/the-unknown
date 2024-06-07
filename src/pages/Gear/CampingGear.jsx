@@ -52,15 +52,15 @@ export const CampingGear = () => {
                 <div className="w-4/5 md:w-1/2 mx-auto text-center">
                     <p className="text-sm md:text-base text-primaryBrown/70 dark:text-white/70">Different tents for different needs. The coziest sleeping gear just for you. Kitchen essentials. Why wait? Go explore.</p>
                 </div>
-                <div className="flex justify-center items-center mt-10 w-full bg-primaryBrown/80 dark:bg-[#1c1c1c] rounded-t-md pt-8 space-x-4">
+                <div className="flex flex-wrap justify-center items-center mt-10 w-full bg-primaryBrown/80 dark:bg-[#1c1c1c] rounded-t-md pt-8 gap-4">
                     <button onClick={() => handleFilterChange("category", "tent")} className={`${catFilter === "tent" ? "selected" : "not-selected"}`}>tents</button>
                     <button onClick={() => handleFilterChange("category", "backpack")} className={`${catFilter === "backpack" ? "selected" : "not-selected"}`}>backpacks</button>
                     <button onClick={() => handleFilterChange("category", "sleeping bag")} className={`${catFilter === "sleeping bag" ? "selected" : "not-selected"}`}>sleeping bags</button>
                     <button onClick={() => handleFilterChange("category", "kitchen")} className={`${catFilter === "kitchen" ? "selected" : "not-selected"}`}>kitchen</button>
                     <button onClick={() => handleFilterChange("category", "clothes")} className={`${catFilter === "clothes" ? "selected" : "not-selected"}`}>clothes</button>
-                    {catFilter ? (<button onClick={() => handleFilterChange("category", null)} className="text-color hover:underline hover:underline-offset-2">clear filter</button>) : null}
+                    {catFilter ? (<button onClick={() => handleFilterChange("category", null)} className="text-color text-sm md:text-base hover:underline hover:underline-offset-2">clear filter</button>) : null}
                 </div>
-                <div className="flex flex-wrap justify-center gap-10 bg-primaryBrown/80 dark:bg-[#1c1c1c] rounded-b-md mb-10 py-12">
+                <div className="flex flex-wrap justify-center gap-10 bg-primaryBrown/80 dark:bg-[#1c1c1c] rounded-b-md mb-10 py-6 md:py-12">
                     {gearEl}
                 </div>
             </div>

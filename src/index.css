@@ -59,11 +59,11 @@
   }
 
   .not-selected {
-    @apply border-2 border-lime-500 dark:border-orange-600 px-2 py-1 rounded-md text-white
+    @apply border-2 text-sm md:text-base border-lime-500 dark:border-orange-600 px-2 py-1 rounded-md text-white
   }
 
   .selected {
-    @apply border-2 border-lime-500 dark:border-orange-600 bg-lime-500 dark:bg-orange-600 text-color px-2 py-1 rounded-md
+    @apply text-sm md:text-base border-2 border-lime-500 dark:border-orange-600 bg-lime-500 dark:bg-orange-600 text-color px-2 py-1 rounded-md
   }
 
   .quantity-btn {
