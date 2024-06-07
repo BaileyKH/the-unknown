@@ -8,6 +8,7 @@ import { CampgroundDetail } from './pages/Campgrounds/CampgroundDetail';
 import { CampingGear } from './pages/Gear/CampingGear';
 import { CampingGearDetail } from './pages/Gear/CampingGearDetail';
 import { Cart } from './pages/Cart';
+import { CartProvider } from './components/CartContext';
 
 
 
@@ -15,20 +16,22 @@ function App() {
 
   return (
     <>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="/gear" element={<CampingGear />} />
-            <Route path="/gear/:id" element={<CampingGearDetail />} />
-            <Route path="/grounds" element={<Campgrounds />} />
-            <Route path="grounds/:id" element={<CampgroundDetail />} />
-            <Route path="/cart" element={<Cart />} />
+      <CartProvider>
+        <Router>
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route index element={<Home />} />
+              <Route path="/gear" element={<CampingGear />} />
+              <Route path="/gear/:id" element={<CampingGearDetail />} />
+              <Route path="/grounds" element={<Campgrounds />} />
+              <Route path="grounds/:id" element={<CampgroundDetail />} />
+              <Route path="/cart" element={<Cart />} />
 
-            <Route path="*" element={<NotFound />} />
-          </Route>
-        </Routes>
-      </Router>
+              <Route path="*" element={<NotFound />} />
+            </Route>
+          </Routes>
+        </Router>
+      </CartProvider>
     </>
   );
 }

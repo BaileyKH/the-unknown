@@ -19,14 +19,13 @@ export const CampingGear = () => {
     // Camping gear elements with filter functionality
     const gearEl = displayedGear.map(gear => (
         <div key={gear.id}>
-            <div className="flex flex-col justify-center items-start w-[350px] rounded-md bg-white/60 dark:bg-white/30 p-4">
+            <div className="flex flex-col justify-center items-start w-[325px] rounded-md bg-white/60 dark:bg-white/30 shadow-lg p-4 transition-transform duration-300 ease-in-out will-change-transform origin-center hover:scale-105">
                 <Link to={`/gear/${gear.id}`} state={{search: `?${searchParams.toString()}`, category: catFilter}}>
                     <img src={gear.img} className="overflow-hidden rounded-t-md"/>
                     <p className="text-color font-bold text-xl tracking-wider mt-4">{gear.brand}</p>
                     <p className="text-color my-4">{gear.item}</p>
-                    <p className="text-color">{gear.price}</p>
+                    <p className="text-color">${gear.price}</p>
                 </Link>
-                <Link className="bg-white/85 font-bold tracking-wide text-color dark:text-black rounded-md py-2 px-4 mt-8 shadow-xl active:shadow-none">Add to Cart</Link>
             </div>
         </div>
     ))
