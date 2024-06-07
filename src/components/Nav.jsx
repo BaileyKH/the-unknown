@@ -4,6 +4,9 @@ import { DarkModeContext } from "./Layout";
 import { useCart } from '/src/components/CartContext.jsx';
 import { IconMenu2, IconShoppingCart } from '@tabler/icons-react';
 
+import darkL from '/src/assets/images/dark-lantern.svg'
+import lightL from '/src/assets/images/light-lantern.svg'
+
 export const Nav = () => {
     const [mobile, setMobile] = useState(false);
     const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
@@ -27,7 +30,7 @@ export const Nav = () => {
                             <Link to="/cart"><IconShoppingCart stroke={1.5} className="mr-8 pr-8 w-14 text-color border-primaryBrown border-r dark:border-neutral-100" /></Link>
                             {totalItems > 0 ? <p className="absolute -top-3 left-4 text-black bg-yellow-300 drop-shadow-2xl rounded-full px-2">{totalItems}</p> : null}
                         </div>
-                        <img onClick={toggleDarkMode} src={darkMode ? "/src/assets/images/dark-lantern.svg" : "/src/assets/images/light-lantern.svg"} 
+                        <img onClick={toggleDarkMode} src={darkMode ? darkL : lightL} 
                             className="w-10 cursor-pointer bg-[#ca8a04] dark:bg-[#44403c] rounded-full drop-shadow"
                             aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
                         />
