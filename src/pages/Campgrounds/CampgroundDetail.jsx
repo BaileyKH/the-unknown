@@ -44,7 +44,7 @@ export const CampgroundDetail = () => {
                                 <h1 className="text-lg md:text-4xl font-bold text-color text-center mx-2 drop-shadow-lg">{groundsDetails.name}</h1>
                                 <img src={darkMode ? dCampfire : lCampfire} className="w-6 md:w-12 drop-shadow-lg"/>
                             </div>
-                            <p className="text-color text-xs md:text-lg md:px-4 mt-2 md:mt-4 text-center">{groundsDetails.description}</p>
+                            <p className="text-color text-sm md:text-lg md:px-4 mt-2 md:mt-4 text-center">{groundsDetails.description}</p>
                             <a href={groundsDetails.reservationUrl} target="_blank" className="mt-4 md:mt-8 px-4 md:px-8 py-2 md:py-4 font-bold text-xl md:text-2xl text-color bg-lime-500 dark:bg-orange-600 rounded-lg shadow-lg transition-shadow ease-linear active:shadow-none">
                                     Book Now!
                             </a>
@@ -52,7 +52,7 @@ export const CampgroundDetail = () => {
                         <div className="flex flex-col justify-center items-start">
                             <div className="camp-card relative">
                                 <IconSun stroke={2} className="camp-card-icon"/>
-                                <p className="campground-text"><span className="campground-span">Weather</span> {groundsDetails.weatherOverview ? groundsDetails.weatherOverview : "No Weather Available"}</p>
+                                <p className="campground-text leading-loose"><span className="campground-span">Weather</span> {groundsDetails.weatherOverview ? groundsDetails.weatherOverview : "No Weather Available"}</p>
                             </div>
 
                             <div className="camp-card relative">
@@ -87,7 +87,7 @@ export const CampgroundDetail = () => {
                                 <p className="campground-text mt-2 md:mt-4">{groundsDetails.directionsOverview}</p>
                             </div>
 
-                            <div className="flex flex-col justify-center items-center mt-10 md:mt-20">
+                            <div className="flex flex-col justify-center items-center mb-4 md:mb-8 mt-10 md:mt-20">
                                 <p className="text-xs text-center md:text-sm text-color">{groundsDetails.regulationsOverview}</p>
                             </div>
                         </div>
