@@ -27,7 +27,7 @@ function App() {
               <Route path="grounds/:id" element={<CampgroundDetail />} />
               <Route path="/cart" element={<Cart />} />
 
-              <Route path="*" element={<NotFound />} />
+              <Route path="/404" element={<NotFound />} />
             </Route>
           </Routes>
         </Router>
