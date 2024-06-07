@@ -5,7 +5,7 @@ import { Link, useOutletContext } from "react-router-dom";
 import nfLight from '/src/assets/images/404-light.svg'
 import nfDark from '/src/assets/images/404-dark.svg'
 
-export const NotFound = () => {
+export const Custom404 = () => {
 
     const { darkMode } = useOutletContext();
 

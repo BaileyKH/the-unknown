@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Home } from "./pages/Home"
 import { Layout } from './components/Layout';
 import { Campgrounds } from './pages/Campgrounds/Campgounds';
-import { NotFound } from './pages/NotFound';
+import { Custom404 } from './pages/Custom404';
 import { CampgroundDetail } from './pages/Campgrounds/CampgroundDetail';
 import { CampingGear } from './pages/Gear/CampingGear';
 import { CampingGearDetail } from './pages/Gear/CampingGearDetail';
@@ -27,7 +27,7 @@ function App() {
               <Route path="grounds/:id" element={<CampgroundDetail />} />
               <Route path="/cart" element={<Cart />} />
 
-              <Route path="/404" element={<NotFound />} />
+              <Route path="*" element={<Custom404 />} />
             </Route>
           </Routes>
         </Router>
