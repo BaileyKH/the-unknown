@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link, useOutletContext } from "react-router-dom";
 
-import lightPark from '/src/assets/images/park-light.svg'
-import darkPark from '/src/assets/images/park-dark.svg'
+import lightPark from '/src/assets/images/park-light.webp'
+import darkPark from '/src/assets/images/park-dark.webp'
 import tent from '/src/assets/images/tent-icon.svg'
 import { CampgroundList } from "../../components/CampgroundList";
 

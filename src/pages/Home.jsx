@@ -4,10 +4,10 @@ import { IconExclamationMark } from '@tabler/icons-react';
 
 import { ProductBanner } from "../components/ProductBanner";
 
-import heroImg from '/src/assets/images/day-hero.svg'
-import darkHero from '/src/assets/images/hero-night.svg'
-import lightBag from '/src/assets/images/backpack-light.svg'
-import darkBag from '/src/assets/images/backpack-dark.svg'
+import heroImg from '/src/assets/images/day-hero.webp'
+import darkHero from '/src/assets/images/hero-night.webp'
+import lightBag from '/src/assets/images/backpack-light.webp'
+import darkBag from '/src/assets/images/backpack-dark.webp'
 import lTable from '/src/assets/images/table-light.svg'
 import dTable from '/src/assets/images/table-dark.svg'
 
@@ -55,10 +55,10 @@ export const Home = () => {
                     <h2 className="text-color text-lg md:text-2xl font-bold underline underline-offset-8 mb-3 md:mb-6">Find your perfect Tent</h2>
                     <div className="w-full flex gap-4">
                         <div className="w-1/2">
-                            <img src={tentB1} className="rounded-lg"/>
+                            <img src={tentB1} className="rounded-lg w-full"/>
                         </div>
                         <div className="w-1/2">
-                            <img src={tentB2} className="rounded-lg"/>
+                            <img src={tentB2} className="rounded-lg w-full"/>
                         </div>
                     </div>
                     <Link to="/gear?category=tent" className="flex justify-center items-center bg-lime-500 dark:bg-orange-600 py-2 text-lg md:text-xl font-bold tracking-wider text-color rounded-md mt-4 shadow-md active:shadow-none">Shop Tents</Link>

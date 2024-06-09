@@ -2,8 +2,8 @@ import React from "react";
 
 import { Link, useOutletContext } from "react-router-dom";
 
-import nfLight from '/src/assets/images/404-light.svg'
-import nfDark from '/src/assets/images/404-dark.svg'
+import nfLight from '/src/assets/images/404-light.webp'
+import nfDark from '/src/assets/images/404-dark.webp'
 
 export const Custom404 = () => {
 
