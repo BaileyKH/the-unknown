@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback, useMemo } from "react";
 import { useParams, useLocation, Link } from "react-router-dom";
 
 import { gearData } from "/src/GearData.js";
@@ -25,36 +25,40 @@ export const CampingGearDetail = () => {
         setGearItem(selectedGear);
     }, [id]);
 
-    const handleIncrease = () => {
-        if (quantity < maxQuantity) {
-            setQuantity((prevQuantity) => prevQuantity + 1);
-        }
-    };
 
-    const handleDecrease = () => {
-        if (quantity > 1) {
-            setQuantity((prevQuantity) => prevQuantity - 1);
-        }
-    };
+    const handleIncrease = useCallback(() => {
+        setQuantity(prevQuantity => prevQuantity < maxQuantity ? prevQuantity + 1 : prevQuantity);
+    }, [maxQuantity]);
 
-    const handleChange = (e) => {
+
+    const handleDecrease = useCallback(() => {
+        setQuantity(prevQuantity => prevQuantity > 1 ? prevQuantity - 1 : prevQuantity);
+    }, []);
+
+
+    const handleChange = useCallback((e) => {
         const val = parseInt(e.target.value, 10);
         if (!isNaN(val) && val <= maxQuantity && val >= 1) {
             setQuantity(val);
         }
-    };
+    }, [maxQuantity]);
 
-    const addItemToCart = () => {
-        return addToCart({ ...gearItem, quantity })
-    }
 
-    const notify = () => toast(`💼 Item added to cart!`);
+    const addItemToCart = useCallback(() => {
+        return addToCart({ ...gearItem, quantity });
+    }, [addToCart, gearItem, quantity]);
 
-    if (!gearItem) return <div>Loading...</div>;
+
+    const notify = useCallback(() => toast(`💼 Item added to cart!`), []);
+
+    const gearItemMemo = useMemo(() => gearItem, [gearItem]);
+
+    if (!gearItemMemo) return <div>Loading...</div>;
 
     const search = location.state?.search || "";
     const category = location.state?.category || "all";
 
+    
     return (
         <div className="mx-8 md:mx-16 my-4 md:my-8">
             <Link to={`..${search}`} relative="path" className="text-color">
@@ -63,21 +67,21 @@ export const CampingGearDetail = () => {
             <div className="flex flex-col md:flex-row mt-2">
                 <div className="md:w-1/2">
                     <img
-                        src={gearItem.img}
-                        alt={gearItem.item}
+                        src={gearItemMemo.img}
+                        alt={gearItemMemo.item}
                         className="rounded-lg"
                     />
                 </div>
                 <div className="md:w-1/2 flex justify-between md:justify-normal items-start mt-4 md:mt-0 md:flex-col px-2 md:px-8">
                     <div>
                         <p className="text-color dark:text-orange-600 underline underline-offset-4">
-                            {gearItem.brand}
+                            {gearItemMemo.brand}
                         </p>
                         <p className="text-color text-lg md:text-2xl font-bold mt-1 mb-4">
-                            {gearItem.item}
+                            {gearItemMemo.item}
                         </p>
                         <p className="text-color text-sm md:text-xl font-bold">
-                            ${gearItem.price}
+                            ${gearItemMemo.price}
                         </p>
                     </div>
                     <div>
@@ -132,7 +136,7 @@ export const CampingGearDetail = () => {
             </div>
             <div className="bg-white/60 dark:bg-white/30 rounded-md mt-12">
                 <p className="text-color font-bold text-sm md:text-lg text-center leading-loose tracking-wider drop-shadow-md p-4 md:p-8">
-                    {gearItem.description}
+                    {gearItemMemo.description}
                 </p>
             </div>
             <Trending />

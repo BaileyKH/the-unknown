@@ -1,49 +1,51 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo, useCallback } from "react";
 import { Link, useSearchParams } from "react-router-dom";
-
 import { gearData } from "/src/GearData.js";
 
 export const CampingGear = () => {
+    const [gearList, setGearList] = useState([]);
+    const [searchParams, setSearchParams] = useSearchParams();
 
-    const [gearList, setGearList] = useState([])
-    const [searchParams, setSearchParams] = useSearchParams()
+    const catFilter = searchParams.get("category");
 
-    const catFilter = searchParams.get("category")
-    const displayedGear = catFilter ? gearList.filter(gear => gear.category === catFilter) : gearList
+    const displayedGear = useMemo(() => {
+        return catFilter ? gearList.filter(gear => gear.category === catFilter) : gearList;
+    }, [catFilter, gearList]);
 
     useEffect(() => {
         const gearItems = gearData();
         setGearList(gearItems);
     }, []);
 
-    // Camping gear elements with filter functionality
-    const gearEl = displayedGear.map(gear => (
-        <div key={gear.id}>
-            <div className="flex flex-col justify-center items-start w-[325px] rounded-md bg-white/60 dark:bg-white/30 shadow-lg p-4 transition-transform duration-300 ease-in-out will-change-transform origin-center hover:scale-105">
-                <Link to={`/gear/${gear.id}`} state={{search: `?${searchParams.toString()}`, category: catFilter}}>
-                    <img src={gear.img} className="overflow-hidden rounded-t-md"/>
-                    <p className="text-color font-bold text-xl tracking-wider mt-4">{gear.brand}</p>
-                    <p className="text-color my-4">{gear.item}</p>
-                    <p className="text-color">${gear.price}</p>
-                </Link>
+    const gearEl = useMemo(() => {
+        return displayedGear.map(gear => (
+            <div key={gear.id}>
+                <div className="flex flex-col justify-center items-start w-[325px] rounded-md bg-white/60 dark:bg-white/30 shadow-lg p-4 transition-transform duration-300 ease-in-out will-change-transform origin-center hover:scale-105">
+                    <Link to={`/gear/${gear.id}`} state={{search: `?${searchParams.toString()}`, category: catFilter}}>
+                        <img src={gear.img} className="overflow-hidden rounded-t-md" alt={gear.item}/>
+                        <p className="text-color font-bold text-xl tracking-wider mt-4">{gear.brand}</p>
+                        <p className="text-color my-4">{gear.item}</p>
+                        <p className="text-color">${gear.price}</p>
+                    </Link>
+                </div>
             </div>
-        </div>
-    ))
+        ));
+    }, [displayedGear, searchParams, catFilter]);
 
-    function handleFilterChange(key, value) {
+    const handleFilterChange = useCallback((key, value) => {
         setSearchParams(prevParams => {
             if (value === null) {
-                prevParams.delete(key)
+                prevParams.delete(key);
             } else {
-                prevParams.set(key, value)
+                prevParams.set(key, value);
             }
-            return prevParams
-        })
-    }
+            return prevParams;
+        });
+    }, [setSearchParams]);
 
-    return(
+    return (
         <div>
-            <div className="relative bg-[url('/src/assets/gear/gear-hero.jpg')] bg-cover bg-center min-h-96 md:min-h-[550px]">
+            <div className="relative bg-[url('/src/assets/gear/gear-hero.jpg')] bg-cover bg-center min-h-96 md:min-h-[550px]" aria-label="mountain side campground overlooking a lake">
                 <h1 className="absolute text-lime-600 dark:text-white text-center font-jaini w-full -bottom-6 md:-bottom-12 text-6xl md:text-9xl tracking-wider drop-shadow-xl">
                     Camping Gear
                 </h1>

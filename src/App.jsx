@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import { Home } from "./pages/Home"
@@ -10,7 +11,7 @@ import { CampingGearDetail } from './pages/Gear/CampingGearDetail';
 import { Cart } from './pages/Cart';
 import { CartProvider } from './components/CartContext';
 
-
+const MemoizedLayout = memo(Layout)
 
 function App() {
 
@@ -19,7 +20,7 @@ function App() {
       <CartProvider>
         <Router>
           <Routes>
-            <Route path="/" element={<Layout />}>
+            <Route path="/" element={<MemoizedLayout />}>
               <Route index element={<Home />} />
               <Route path="/gear" element={<CampingGear />} />
               <Route path="/gear/:id" element={<CampingGearDetail />} />
