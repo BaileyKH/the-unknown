@@ -7,8 +7,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        inter: [`"Inter", sans-serif;`],
-        jaini: ['Jaini', 'serif'],
+        inter: ['"Inter"', 'sans-serif'],
+        jaini: ['"Jaini"', 'serif'],
       },
       colors: {
         bgLight: "#c8f781",
