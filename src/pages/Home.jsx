@@ -34,7 +34,7 @@ export const Home = () => {
             <div className="w-full">
                 <div className="flex items-center justify-center">
                     <img src={darkMode ? darkHero : heroImg} 
-                        width="1261" height="709"
+                        width="1261px" height="709px"
                         alt={darkMode ? "Spooky forest with tent" : "Sunny forest with tent"}
                         className="w-full h-auto" 
                         decoding="async"
@@ -58,10 +58,10 @@ export const Home = () => {
                     <h2 className="text-color text-lg md:text-2xl font-bold underline underline-offset-8 mb-3 md:mb-6">Find your perfect Tent</h2>
                     <div className="w-full flex gap-4">
                         <div className="w-1/2">
-                            <img src={tentB1} width="700" height="450" className="rounded-lg w-full h-auto" alt="inside view of orange camping tent looking out into the forest" decoding="async"/>
+                            <img src={tentB1} width="700px" height="450px" className="rounded-lg w-full h-auto" alt="inside view of orange camping tent looking out into the forest" decoding="async"/>
                         </div>
                         <div className="w-1/2">
-                            <img src={tentB2} width="700" height="450" className="rounded-lg w-full h-auto" alt="beige camping tent surrounded by large trees in forest" decoding="async"/>
+                            <img src={tentB2} width="700px" height="450px" className="rounded-lg w-full h-auto" alt="beige camping tent surrounded by large trees in forest" decoding="async"/>
                         </div>
                     </div>
                     <Link to="/gear?category=tent" className="flex justify-center items-center bg-lime-500 dark:bg-orange-600 py-2 text-lg md:text-xl font-bold tracking-wider text-color rounded-md mt-4 shadow-md active:shadow-none">Shop Tents</Link>
@@ -120,7 +120,7 @@ export const Home = () => {
                     alt={"camping picnic table"}
                 />
                 <div className="flex justify-center overflow-hidden h-80 w-full mt-8 md:mt-16">
-                    <img src={explore} width="1261" height="320" className="relative w-full h-auto object-cover brightness-50" loading="lazy" alt="camping tent overlooking beautiful mountain side" decoding="async"/>
+                    <img src={explore} width="1261px" height="320px" className="relative w-full h-auto object-cover brightness-50" loading="lazy" alt="camping tent overlooking beautiful mountain side" decoding="async"/>
                     <div className="absolute text-center mt-8 md:mt-4">
                         <h2 className="font-jaini text-white text-6xl md:text-9xl drop-shadow-2xl tracking-wide mb-12">Explore <span className="text-3xl md:text-6xl">the</span> Unknown</h2>
                         <Link to="/grounds" className="bg-black text-white px-6 py-3 rounded-md text-xl font-bold shadow-lg">Camp Now</Link>

@@ -27,7 +27,7 @@ export const Nav = () => {
                         <NavLink to="/gear" className={({ isActive }) => (isActive ? "active" : "nav-link")}>Camping Gear</NavLink>
                         <NavLink to="/grounds" className={({ isActive }) => (isActive ? "active" : "nav-link")}>Campgrounds</NavLink>
                         <div className="w-fit relative">
-                            <Link to="/cart"><IconShoppingCart stroke={1.5} className="mr-8 pr-8 w-14 text-color border-primaryBrown border-r dark:border-neutral-100" /></Link>
+                            <Link to="/cart" aria-label="navigates to shopping cart"><IconShoppingCart stroke={1.5} className="mr-8 pr-8 w-14 text-color border-primaryBrown border-r dark:border-neutral-100" /></Link>
                             {totalItems > 0 ? <p className="absolute -top-3 left-4 text-black bg-yellow-300 drop-shadow-2xl rounded-full px-2">{totalItems}</p> : null}
                         </div>
                         <img onClick={toggleDarkMode} src={darkMode ? darkL : lightL} 
@@ -48,7 +48,7 @@ export const Nav = () => {
                                 <Link to="/gear" onClick={toggleMobileNav} className="text-color">Camping Gear</Link>
                                 <Link to="/grounds" onClick={toggleMobileNav} className="text-color">Campgrounds</Link>
                                 <div className="relative w-min">
-                                    <Link to="/cart" onClick={toggleMobileNav}><IconShoppingCart stroke={1.5} className="w-6 h-6  mx-auto text-color" /></Link>
+                                    <Link to="/cart" onClick={toggleMobileNav} aria-label="navigates to shopping cart"><IconShoppingCart stroke={1.5} className="w-6 h-6  mx-auto text-color" /></Link>
                                     {totalItems > 0 ? <p className="absolute -top-3 left-4 text-black bg-yellow-300 drop-shadow-2xl rounded-full px-2">{totalItems}</p> : null}
                                 </div>
                                 <img onClick={toggleDarkMode} src={darkMode ? darkL : lightL} 
