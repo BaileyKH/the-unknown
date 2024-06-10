@@ -19,7 +19,7 @@ export const Trending = () => {
     const [trendingGear, setTrendingGear] = useState(gearData())
 
     return (
-        <div className="my-10 md:my-20">
+        <section className="my-10 md:my-20">
             <p className="text-lg md:text-2xl font-bold text-color underline underline-offset-8 mb-3 md:mb-6">Trending Now</p>
             <Swiper
             modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -40,6 +40,6 @@ export const Trending = () => {
             <SwiperSlide><Link to={`/gear/${trendingGear[14].id}`} aria-label={`navigates to ${trendingGear[14].item} detail page`}><img src={trendingGear[14].img} width="268px" height="151px" alt="set of five camping cooking pans" className="w-full rounded-lg user-select-none" loading="lazy" decoding="async"/></Link></SwiperSlide>
             <SwiperSlide><Link to={`/gear/${trendingGear[18].id}`} aria-label={`navigates to ${trendingGear[18].item} detail page`}><img src={trendingGear[18].img} width="268px" height="151px" alt="heavy duty brown and black camping boots" className="w-full rounded-lg user-select-none" loading="lazy" decoding="async"/></Link></SwiperSlide>
             </Swiper>
-        </div>
+        </section>
     );
 }

@@ -44,7 +44,7 @@ export const CampingGear = () => {
     }, [setSearchParams]);
 
     return (
-        <div>
+        <section>
             <div className="relative bg-[url('/src/assets/gear/gear-hero.webp')] bg-cover bg-center min-h-96 md:min-h-[550px]" aria-label="mountain side campground overlooking a lake" loading="eager" decoding="async">
                 <h1 className="absolute text-lime-600 dark:text-white text-center font-jaini w-full -bottom-6 md:-bottom-12 text-6xl md:text-9xl tracking-wider drop-shadow-xl">
                     Camping Gear
@@ -66,6 +66,6 @@ export const CampingGear = () => {
                     {gearEl}
                 </div>
             </div>
-        </div>
+        </section>
     );
 }

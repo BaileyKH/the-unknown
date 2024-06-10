@@ -60,7 +60,7 @@ export const CampingGearDetail = () => {
 
     
     return (
-        <div className="mx-8 md:mx-16 my-4 md:my-8">
+        <section className="mx-8 md:mx-16 my-4 md:my-8">
             <Link to={`..${search}`} relative="path" className="text-color">
                 &larr; Back to {category}
             </Link>
@@ -141,6 +141,6 @@ export const CampingGearDetail = () => {
                 </p>
             </div>
             <Trending />
-        </div>
+        </section>
     );
 };

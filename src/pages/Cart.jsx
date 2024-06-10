@@ -21,7 +21,7 @@ export const Cart = () => {
   }
 
   return (
-    <div className="mx-8 md:mx-16 my-4 md:my-8">
+    <section className="mx-8 md:mx-16 my-4 md:my-8">
       <h1 className="text-2xl font-bold text-color underline underline-offset-8 mb-4">Shopping Cart</h1>
       <div className="flex flex-col">
         {cart.length === 0 ? (
@@ -90,7 +90,7 @@ export const Cart = () => {
             theme="dark"
         />
       </div>
-    </div>
+    </section>
   );
 };
 

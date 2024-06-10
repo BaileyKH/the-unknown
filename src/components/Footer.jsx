@@ -10,7 +10,7 @@ export const Footer = () => {
     }
 
     return(
-        <div className="bg-lime-500 dark:bg-orange-600 py-4">
+        <footer className="bg-lime-500 dark:bg-orange-600 py-4">
             <div className="flex flex-col items-center mb-8 py-4 md:py-8">
                 <div>
                     <p className="font-bold text-sm md:text-lg tracking-wide text-color dark:text-black mb-2">Newsletter</p>
@@ -37,6 +37,6 @@ export const Footer = () => {
             <div className="flex justify-center">
                 <p className="text-color text-xs md:text-base dark:text-black">{`© ${year} BaileyKH. All Rights Reserved.`}</p>
             </div>
-        </div>
+        </footer>
     );
 }

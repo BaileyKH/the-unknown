@@ -11,7 +11,7 @@ export const Campgrounds = () => {
     const { darkMode } = useOutletContext();
 
     return (
-        <div className="mx-8 ">
+        <section className="mx-8 ">
             <div className="flex items-center justify-center ">
                 <img src={darkMode ? darkPark : lightPark} className="rounded-b-xl" decoding="async"/>
                 <div className="absolute bg-white/90 dark:bg-black/90 mx-16 px-4 py-2 md:px-8 md:py-4 rounded-md drop-shadow-2xl">
@@ -30,6 +30,6 @@ export const Campgrounds = () => {
                 </h2>
                 <CampgroundList />
             </div>
-        </div>
+        </section>
     );
 }

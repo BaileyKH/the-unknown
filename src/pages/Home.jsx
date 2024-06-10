@@ -31,7 +31,7 @@ export const Home = () => {
 
     return(
         <div className={`${darkMode && "dark"}`}>
-            <div className="w-full">
+            <main className="w-full">
                 <div className="flex items-center justify-center">
                     <img src={darkMode ? darkHero : heroImg} 
                         width="1261px" height="709px"
@@ -54,7 +54,7 @@ export const Home = () => {
                         </Link>
                     </div>
                 </div>
-                <div className="my-10 md:my-20 mx-8 md:mx-16">
+                <section className="my-10 md:my-20 mx-8 md:mx-16">
                     <h2 className="text-color text-lg md:text-2xl font-bold underline underline-offset-8 mb-3 md:mb-6">Find your perfect Tent</h2>
                     <div className="w-full flex gap-4">
                         <div className="w-1/2">
@@ -65,7 +65,7 @@ export const Home = () => {
                         </div>
                     </div>
                     <Link to="/gear?category=tent" className="flex justify-center items-center bg-lime-500 dark:bg-orange-600 py-2 text-lg md:text-xl font-bold tracking-wider text-color rounded-md mt-4 shadow-md active:shadow-none">Shop Tents</Link>
-                </div>
+                </section>
                 <div className="mx-8 md:mx-16">
                     <Trending />
                 </div>
@@ -76,7 +76,7 @@ export const Home = () => {
                     link={"/gear?category=backpack"}
                     alt={"camping backpack"}
                 />
-                <div className="mx-8 md:mx-16 my-10 md:my-20">
+                <section className="mx-8 md:mx-16 my-10 md:my-20">
                     <h2 className="text-color text-lg md:text-2xl font-bold underline underline-offset-8 mb-3 md:mb-6">Top Categories</h2>
                     <div className="flex flex-wrap justify-center gap-x-6 gap-y-4 md:gap-x-12">
                         <div>
@@ -110,8 +110,7 @@ export const Home = () => {
                             </Link>
                         </div>
                     </div>
-                </div>
-                <br></br>
+                </section>
                 <ProductBanner 
                     light={lTable}
                     dark={dTable}
@@ -119,14 +118,14 @@ export const Home = () => {
                     link={"/gear?category=kitchen"}
                     alt={"camping picnic table"}
                 />
-                <div className="flex justify-center overflow-hidden h-80 w-full mt-8 md:mt-16">
+                <section className="flex justify-center overflow-hidden h-80 w-full mt-8 md:mt-16">
                     <img src={explore} width="1261px" height="320px" className="relative w-full h-auto object-cover brightness-50" loading="lazy" alt="camping tent overlooking beautiful mountain side" decoding="async"/>
                     <div className="absolute text-center mt-8 md:mt-4">
                         <h2 className="font-jaini text-white text-6xl md:text-9xl drop-shadow-2xl tracking-wide mb-12">Explore <span className="text-3xl md:text-6xl">the</span> Unknown</h2>
                         <Link to="/grounds" className="bg-black text-white px-6 py-3 rounded-md text-xl font-bold shadow-lg">Camp Now</Link>
                     </div>
-                </div>
-            </div>
+                </section>
+            </main>
         </div>
     );
 }

@@ -10,7 +10,7 @@ export const Custom404 = () => {
     const { darkMode } = useOutletContext();
 
     return(
-        <div className={`${darkMode && "dark"}`}>
+        <section className={`${darkMode && "dark"}`}>
             <div className="flex h-screen justify-center">
                 <div className="w-full">
                     <img src={darkMode ? nfDark : nfLight} className="w-full" decoding="async"/>
@@ -24,6 +24,6 @@ export const Custom404 = () => {
                     </Link>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }

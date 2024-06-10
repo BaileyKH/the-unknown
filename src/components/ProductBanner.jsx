@@ -6,7 +6,7 @@ export const ProductBanner = (props) => {
     const { darkMode } = useOutletContext();
 
     return (
-        <div className={`${darkMode && "dark"}`}>
+        <section className={`${darkMode && "dark"}`}>
             <div className="mx-auto md:px-5 max-w-full ">
                 <div className="flex justify-between h-80 overflow-hidden mx-16 rounded-xl">
                     <div className="w-2/5 md:w-1/2 text-end">
@@ -26,6 +26,6 @@ export const ProductBanner = (props) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
