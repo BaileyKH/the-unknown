@@ -8,7 +8,7 @@ export default {
     extend: {
       fontFamily: {
         inter: [`"Inter", sans-serif;`],
-        jaini: [`"Jaini Purva", system-ui;`]
+        jaini: ['Jaini', 'serif'],
       },
       colors: {
         bgLight: "#c8f781",
