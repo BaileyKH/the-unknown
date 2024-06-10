@@ -119,7 +119,7 @@ export const Home = () => {
                     alt={"camping picnic table"}
                 />
                 <div className="flex justify-center overflow-hidden h-80 w-full mt-8 md:mt-16">
-                    <img src={explore} className="relative w-full object-cover brightness-50" loading="lazy" alt="camping tent overlooking beautiful mountain side"/>
+                    <img src={explore} className="relative w-full h-auto object-cover brightness-50" loading="lazy" alt="camping tent overlooking beautiful mountain side"/>
                     <div className="absolute text-center mt-8 md:mt-4">
                         <h2 className="font-jaini text-white text-6xl md:text-9xl drop-shadow-2xl tracking-wide mb-12">Explore <span className="text-3xl md:text-6xl">the</span> Unknown</h2>
                         <Link to="/grounds" className="bg-black text-white px-6 py-3 rounded-md text-xl font-bold shadow-lg">Camp Now</Link>
