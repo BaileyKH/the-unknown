@@ -33,6 +33,7 @@ export const Nav = () => {
                         <img onClick={toggleDarkMode} src={darkMode ? darkL : lightL} 
                             className="w-10 cursor-pointer bg-[#ca8a04] dark:bg-[#44403c] rounded-full drop-shadow"
                             aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
+                            decoding="async"
                         />
                     </div>
                     <div className="md:hidden">
@@ -53,6 +54,7 @@ export const Nav = () => {
                                 <img onClick={toggleDarkMode} src={darkMode ? darkL : lightL} 
                                     className="w-10 mx-auto cursor-pointer bg-[#ca8a04] dark:bg-[#44403c] rounded-full drop-shadow"
                                     aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
+                                    decoding="async"
                                 />
                             </nav>
                         </div>

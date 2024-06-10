@@ -70,6 +70,7 @@ export const CampingGearDetail = () => {
                         src={gearItemMemo.img}
                         alt={gearItemMemo.item}
                         className="rounded-lg"
+                        decoding="async"
                     />
                 </div>
                 <div className="md:w-1/2 flex justify-between md:justify-normal items-start mt-4 md:mt-0 md:flex-col px-2 md:px-8">

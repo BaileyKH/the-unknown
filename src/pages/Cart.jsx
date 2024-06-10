@@ -30,7 +30,7 @@ export const Cart = () => {
             cart.map(item => (
             <div key={item.id} className="flex flex-col md:flex-row justify-between my-4 p-4 rounded-md bg-lime-500 dark:bg-[#1c1c1c]">
                 <div className='flex flex-col md:flex-row'>
-                    <img src={item.img} alt={item.item} className="rounded-md w-72"/>
+                    <img src={item.img} alt={item.item} className="rounded-md w-72" decoding="async"/>
                     <div className="flex flex-col mx-0 md:mx-4">
                         <h2 className="text-color underline underline-offset-4 mt-2 md:mt-0">{item.brand}</h2>
                         <p className="font-bold text-xl text-color mt-2">{item.item}</p>

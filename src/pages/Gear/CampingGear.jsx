@@ -22,7 +22,7 @@ export const CampingGear = () => {
             <div key={gear.id}>
                 <div className="flex flex-col justify-center items-start w-[325px] rounded-md bg-white/60 dark:bg-white/30 shadow-lg p-4 transition-transform duration-300 ease-in-out will-change-transform origin-center hover:scale-105">
                     <Link to={`/gear/${gear.id}`} state={{search: `?${searchParams.toString()}`, category: catFilter}}>
-                        <img src={gear.img} className="overflow-hidden rounded-t-md" alt={gear.item}/>
+                        <img src={gear.img} className="overflow-hidden rounded-t-md" alt={gear.item} decoding="async"/>
                         <p className="text-color font-bold text-xl tracking-wider mt-4">{gear.brand}</p>
                         <p className="text-color my-4">{gear.item}</p>
                         <p className="text-color">${gear.price}</p>
@@ -45,7 +45,7 @@ export const CampingGear = () => {
 
     return (
         <div>
-            <div className="relative bg-[url('/src/assets/gear/gear-hero.jpg')] bg-cover bg-center min-h-96 md:min-h-[550px]" aria-label="mountain side campground overlooking a lake" loading="eager">
+            <div className="relative bg-[url('/src/assets/gear/gear-hero.webp')] bg-cover bg-center min-h-96 md:min-h-[550px]" aria-label="mountain side campground overlooking a lake" loading="eager">
                 <h1 className="absolute text-lime-600 dark:text-white text-center font-jaini w-full -bottom-6 md:-bottom-12 text-6xl md:text-9xl tracking-wider drop-shadow-xl">
                     Camping Gear
                 </h1>

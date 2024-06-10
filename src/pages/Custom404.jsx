@@ -13,7 +13,7 @@ export const Custom404 = () => {
         <div className={`${darkMode && "dark"}`}>
             <div className="flex h-screen justify-center">
                 <div className="w-full">
-                    <img src={darkMode ? nfDark : nfLight} className="w-full"/>
+                    <img src={darkMode ? nfDark : nfLight} className="w-full" decoding="async"/>
                 </div>
                 <div className="absolute w-full md:w-2/5 md:right-0 flex flex-col justify-center items-center my-4 md:my-40 md:mr-4 md:px-4 py-2 md:py-4 rounded-lg text-center bg-white/80 shadow-xl">
                     <h1 className="text-black font-jaini text-6xl md:text-9xl drop-shadow-xl">404</h1>

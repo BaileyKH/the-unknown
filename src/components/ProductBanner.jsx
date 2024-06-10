@@ -10,7 +10,7 @@ export const ProductBanner = (props) => {
             <div className="mx-auto md:px-5 max-w-full ">
                 <div className="flex justify-between h-80 overflow-hidden mx-16 rounded-xl">
                     <div className="w-2/5 md:w-1/2 text-end">
-                        <img src={darkMode ? props.dark : props.light} className="w-full h-full object-cover" alt={`3D image of a ${props.alt}`} loading="lazy"/>
+                        <img src={darkMode ? props.dark : props.light} className="w-full h-full object-cover" alt={`3D image of a ${props.alt}`} loading="lazy" decoding="async"/>
                     </div>
                     <div className="flex flex-col justify-center items-center px-0 md:px-32 w-3/5 md:w-1/2 text-center md:text-start bg-yellow-100 dark:bg-zinc-600 text-color">
                         <div className="">

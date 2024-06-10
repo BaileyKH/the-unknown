@@ -47,9 +47,9 @@ export const CampgroundList = () => {
         <div key={ground.id} className="flex flex-col max-w-[300px] bg-white/60 dark:bg-white/30 rounded-md m-4 md:m-10 shadow-lg transition-transform duration-300 ease-in-out will-change-transform origin-center hover:scale-110">
             <Link to={ground.id} >
                 {ground.images && ground.images.length > 0 ? (
-                    <img src={ground.images[0].url} className="w-full h-[300px] object-cover rounded-t-md" alt={ground.images[0].altText}/>
+                    <img src={ground.images[0].url} className="w-full h-[300px] object-cover rounded-t-md" alt={ground.images[0].altText} decoding="async"/>
                 ) : (
-                    <img src="/src/assets/images/Image-Unavailable.svg" className="w-full h-[300px] object-cover rounded-t-md" alt="Image not available"/>
+                    <img src="/src/assets/images/Image-Unavailable.svg" className="w-full h-[300px] object-cover rounded-t-md" alt="Image not available" decoding="async"/>
                 )}
                 <div className="flex flex-col justify-between my-4 px-2">
                     <p className="text-color font-bold mb-4">{ground.name}</p>
