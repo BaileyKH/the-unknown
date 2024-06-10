@@ -57,10 +57,10 @@ export const Home = () => {
                     <h2 className="text-color text-lg md:text-2xl font-bold underline underline-offset-8 mb-3 md:mb-6">Find your perfect Tent</h2>
                     <div className="w-full flex gap-4">
                         <div className="w-1/2">
-                            <img src={tentB1} className="rounded-lg w-full"/>
+                            <img src={tentB1} className="rounded-lg w-full h-auto" loading="lazy"/>
                         </div>
                         <div className="w-1/2">
-                            <img src={tentB2} className="rounded-lg w-full"/>
+                            <img src={tentB2} className="rounded-lg w-full h-auto" loading="lazy"/>
                         </div>
                     </div>
                     <Link to="/gear?category=tent" className="flex justify-center items-center bg-lime-500 dark:bg-orange-600 py-2 text-lg md:text-xl font-bold tracking-wider text-color rounded-md mt-4 shadow-md active:shadow-none">Shop Tents</Link>

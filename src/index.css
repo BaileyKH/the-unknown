@@ -24,7 +24,7 @@
   }
 
   .top-cat-img {
-    @apply w-20 md:w-52 rounded-lg shadow-lg
+    @apply w-20 h-full md:w-52 rounded-lg shadow-lg
   }
 
   .active {

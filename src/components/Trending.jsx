@@ -29,16 +29,16 @@ export const Trending = () => {
             pagination={{ clickable: true }}
             scrollbar={{ draggable: true }}
             >
-            <SwiperSlide><Link to={`/gear/${trendingGear[0].id}`}><img src={trendingGear[0].img} className="rounded-lg user-select-none"/></Link></SwiperSlide>
-            <SwiperSlide><Link to={`/gear/${trendingGear[4].id}`}><img src={trendingGear[4].img} className="rounded-lg user-select-none"/></Link></SwiperSlide>
-            <SwiperSlide><Link to={`/gear/${trendingGear[8].id}`}><img src={trendingGear[8].img} className="rounded-lg user-select-none"/></Link></SwiperSlide>
-            <SwiperSlide><Link to={`/gear/${trendingGear[12].id}`}><img src={trendingGear[12].img} className="rounded-lg user-select-none"/></Link></SwiperSlide>
-            <SwiperSlide><Link to={`/gear/${trendingGear[16].id}`}><img src={trendingGear[16].img} className="rounded-lg user-select-none"/></Link></SwiperSlide>
-            <SwiperSlide><Link to={`/gear/${trendingGear[2].id}`}><img src={trendingGear[2].img} className="rounded-lg user-select-none"/></Link></SwiperSlide>
-            <SwiperSlide><Link to={`/gear/${trendingGear[6].id}`}><img src={trendingGear[6].img} className="rounded-lg user-select-none"/></Link></SwiperSlide>
-            <SwiperSlide><Link to={`/gear/${trendingGear[10].id}`}><img src={trendingGear[10].img} className="rounded-lg user-select-none"/></Link></SwiperSlide>
-            <SwiperSlide><Link to={`/gear/${trendingGear[14].id}`}><img src={trendingGear[14].img} className="rounded-lg user-select-none"/></Link></SwiperSlide>
-            <SwiperSlide><Link to={`/gear/${trendingGear[18].id}`}><img src={trendingGear[18].img} className="rounded-lg user-select-none"/></Link></SwiperSlide>
+            <SwiperSlide><Link to={`/gear/${trendingGear[0].id}`}><img src={trendingGear[0].img} className="rounded-lg user-select-none" loading="lazy"/></Link></SwiperSlide>
+            <SwiperSlide><Link to={`/gear/${trendingGear[4].id}`}><img src={trendingGear[4].img} className="rounded-lg user-select-none" loading="lazy"/></Link></SwiperSlide>
+            <SwiperSlide><Link to={`/gear/${trendingGear[8].id}`}><img src={trendingGear[8].img} className="rounded-lg user-select-none" loading="lazy"/></Link></SwiperSlide>
+            <SwiperSlide><Link to={`/gear/${trendingGear[12].id}`}><img src={trendingGear[12].img} className="rounded-lg user-select-none" loading="lazy"/></Link></SwiperSlide>
+            <SwiperSlide><Link to={`/gear/${trendingGear[16].id}`}><img src={trendingGear[16].img} className="rounded-lg user-select-none" loading="lazy"/></Link></SwiperSlide>
+            <SwiperSlide><Link to={`/gear/${trendingGear[2].id}`}><img src={trendingGear[2].img} className="rounded-lg user-select-none" loading="lazy"/></Link></SwiperSlide>
+            <SwiperSlide><Link to={`/gear/${trendingGear[6].id}`}><img src={trendingGear[6].img} className="rounded-lg user-select-none" loading="lazy"/></Link></SwiperSlide>
+            <SwiperSlide><Link to={`/gear/${trendingGear[10].id}`}><img src={trendingGear[10].img} className="rounded-lg user-select-none" loading="lazy"/></Link></SwiperSlide>
+            <SwiperSlide><Link to={`/gear/${trendingGear[14].id}`}><img src={trendingGear[14].img} className="rounded-lg user-select-none" loading="lazy"/></Link></SwiperSlide>
+            <SwiperSlide><Link to={`/gear/${trendingGear[18].id}`}><img src={trendingGear[18].img} className="rounded-lg user-select-none" loading="lazy"/></Link></SwiperSlide>
             </Swiper>
         </div>
     );
