@@ -13,9 +13,9 @@ export const Campgrounds = () => {
     return (
         <section className="mx-8 ">
             <div className="flex items-center justify-center ">
-                <img src={darkMode ? darkPark : lightPark} className="rounded-b-xl" decoding="async"/>
+                <img src={darkMode ? darkPark : lightPark} width="1273px" height="716px" className="rounded-b-xl" decoding="async" alt="3d rendered forrest"/>
                 <div className="absolute bg-white/90 dark:bg-black/90 mx-16 px-4 py-2 md:px-8 md:py-4 rounded-md drop-shadow-2xl">
-                    <img src={tent} className="absolute -left-2 -top-2 p-1 text-black bg-yellow-300 drop-shadow-2xl rounded-full" decoding="async"/>
+                    <img src={tent} className="absolute -left-2 -top-2 p-1 text-black bg-yellow-300 drop-shadow-2xl rounded-full" alt="small tent icon" decoding="async"/>
                     <h1 className="text-color text-xl text-center md:text-4xl lg:text-6xl font-bold drop-shadow-md">
                         Find the perfect spot
                     </h1>
