@@ -69,7 +69,7 @@ export const CampingGearDetail = () => {
                     <img
                         src={gearItemMemo.img}
                         alt={gearItemMemo.item}
-                        className="rounded-lg"
+                        className="rounded-lg w-full"
                         width="605px"
                         height="340px"
                         decoding="async"
