@@ -58,7 +58,7 @@ export const Cart = () => {
             <h3 className="text-color underline underline-offset-4 mb-2">Order Summary</h3>
             <div className="flex justify-between">
                 <p className="text-color">Subtotal</p>
-                <p className="text-color">${totalPrice}</p>
+                <p className="text-color">${totalPrice.toFixed(2)}</p>
             </div>
             <div className="flex justify-between my-1">
                 <p className="text-color">Standard Shipping</p>
@@ -70,7 +70,7 @@ export const Cart = () => {
             </div>
             <div className="flex justify-between mt-6">
                 <p className="text-lg font-bold text-color">Total</p>
-                <p className="text-lg font-bold text-color">${totalPrice}</p>
+                <p className="text-lg font-bold text-color">${totalPrice.toFixed(2)}</p>
             </div>
             <div className="flex justify-between mt-6">  
                 <p></p>
