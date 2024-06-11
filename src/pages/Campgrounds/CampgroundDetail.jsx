@@ -45,7 +45,7 @@ export const CampgroundDetail = () => {
                                 <img src={darkMode ? dCampfire : lCampfire} width="48px" height="48px" className="w-6 md:w-12 drop-shadow-lg" alt="campfire" decoding="async"/>
                             </div>
                             <p className="text-color text-sm md:text-lg md:px-4 mt-2 md:mt-4 text-center">{groundsDetails.description}</p>
-                            <a href={groundsDetails.reservationUrl} target="_blank" className="mt-4 md:mt-8 px-4 md:px-8 py-2 md:py-4 font-bold text-xl md:text-2xl text-color bg-lime-500 dark:bg-orange-600 rounded-lg shadow-lg transition-shadow ease-linear active:shadow-none">
+                            <a href={groundsDetails.reservationUrl} target="_blank" className="mt-4 md:mt-8 px-4 md:px-8 py-2 md:py-4 font-bold text-xl md:text-2xl text-color bg-white/70 dark:bg-orange-600 rounded-lg shadow-lg transition-shadow ease-linear active:shadow-none">
                                     Book Now!
                             </a>
                         </div>
