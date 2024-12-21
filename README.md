@@ -1,4 +1,4 @@
-# The Unknown
+# The Unknown (Updating in Progress)
 
 The Unknown is an E-commerce web app that allows users to browse and purchase camping equipment (with a twist). The application is built using React and Tailwind CSS, providing a modern and responsive user interface.
 
