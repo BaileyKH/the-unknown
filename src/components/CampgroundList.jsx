@@ -4,6 +4,8 @@ import { Link, useSearchParams } from "react-router-dom";
 import { getCampgrounds } from '/src/api.js'
 import { Loading } from "./Loading";
 
+import unavailable from '/src/assets/images/Image-Unavailable.webp'
+
 export const CampgroundList = () => {
 
     const [searchParams, setSearchParams] = useSearchParams();
@@ -49,7 +51,7 @@ export const CampgroundList = () => {
                 {ground.images && ground.images.length > 0 ? (
                     <img src={ground.images[0].url} className="w-full h-[300px] object-cover rounded-t-md" alt={ground.images[0].altText} decoding="async"/>
                 ) : (
-                    <img src="/src/assets/images/Image-Unavailable.webp" width="300px" height="300px" className="w-full object-cover rounded-t-md" alt="Image not available" decoding="async"/>
+                    <img src={unavailable} width="300px" height="300px" className="w-full object-cover rounded-t-md" alt="Image not available" decoding="async"/>
                 )}
                 <div className="flex flex-col justify-between my-4 px-2">
                     <p className="text-color font-bold mb-4">{ground.name}</p>
