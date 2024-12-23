@@ -22,7 +22,6 @@ Check out the live demo of the app [here](https://the-unknown.vercel.app).
 ## Technologies
 - React
 - Tailwind CSS
-- Vite
 - National Park Services API
 - React-toastify
 
